@@ -1,0 +1,33 @@
+C:\Users\james\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\Animation Game Test 6.csproj.AssemblyReference.cache
+C:\Users\james\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\Animation_Game_Test_6.Form1.resources
+C:\Users\james\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\Animation Game Test 6.csproj.GenerateResource.cache
+C:\Users\james\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\Animation Game Test 6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\james\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\Animation Game Test 6.AssemblyInfoInputs.cache
+C:\Users\james\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\Animation Game Test 6.AssemblyInfo.cs
+C:\Users\james\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\Animation Game Test 6.csproj.CoreCompileInputs.cache
+C:\Users\james\source\repos\Animation Game Test 6\Animation Game Test 6\bin\Debug\net6.0-windows\Animation Game Test 6.exe
+C:\Users\james\source\repos\Animation Game Test 6\Animation Game Test 6\bin\Debug\net6.0-windows\Animation Game Test 6.deps.json
+C:\Users\james\source\repos\Animation Game Test 6\Animation Game Test 6\bin\Debug\net6.0-windows\Animation Game Test 6.runtimeconfig.json
+C:\Users\james\source\repos\Animation Game Test 6\Animation Game Test 6\bin\Debug\net6.0-windows\Animation Game Test 6.dll
+C:\Users\james\source\repos\Animation Game Test 6\Animation Game Test 6\bin\Debug\net6.0-windows\Animation Game Test 6.pdb
+C:\Users\james\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\Animation Game Test 6.dll
+C:\Users\james\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\refint\Animation Game Test 6.dll
+C:\Users\james\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\Animation Game Test 6.pdb
+C:\Users\james\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\Animation Game Test 6.genruntimeconfig.cache
+C:\Users\james\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\ref\Animation Game Test 6.dll
+C:\Users\oriun\source\repos\Animation Game Test 6\Animation Game Test 6\bin\Debug\net6.0-windows\Animation Game Test 6.exe
+C:\Users\oriun\source\repos\Animation Game Test 6\Animation Game Test 6\bin\Debug\net6.0-windows\Animation Game Test 6.deps.json
+C:\Users\oriun\source\repos\Animation Game Test 6\Animation Game Test 6\bin\Debug\net6.0-windows\Animation Game Test 6.runtimeconfig.json
+C:\Users\oriun\source\repos\Animation Game Test 6\Animation Game Test 6\bin\Debug\net6.0-windows\Animation Game Test 6.dll
+C:\Users\oriun\source\repos\Animation Game Test 6\Animation Game Test 6\bin\Debug\net6.0-windows\Animation Game Test 6.pdb
+C:\Users\oriun\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\Animation_Game_Test_6.Form1.resources
+C:\Users\oriun\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\Animation Game Test 6.csproj.GenerateResource.cache
+C:\Users\oriun\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\Animation Game Test 6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oriun\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\Animation Game Test 6.AssemblyInfoInputs.cache
+C:\Users\oriun\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\Animation Game Test 6.AssemblyInfo.cs
+C:\Users\oriun\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\Animation Game Test 6.csproj.CoreCompileInputs.cache
+C:\Users\oriun\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\Animation Game Test 6.dll
+C:\Users\oriun\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\refint\Animation Game Test 6.dll
+C:\Users\oriun\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\Animation Game Test 6.pdb
+C:\Users\oriun\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\Animation Game Test 6.genruntimeconfig.cache
+C:\Users\oriun\source\repos\Animation Game Test 6\Animation Game Test 6\obj\Debug\net6.0-windows\ref\Animation Game Test 6.dll
