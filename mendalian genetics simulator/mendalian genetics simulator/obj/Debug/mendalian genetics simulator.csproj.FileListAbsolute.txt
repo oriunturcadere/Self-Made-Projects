@@ -1,0 +1,10 @@
+C:\Users\james\source\repos\mendalian genetics simulator\mendalian genetics simulator\bin\Debug\mendalian genetics simulator.exe.config
+C:\Users\james\source\repos\mendalian genetics simulator\mendalian genetics simulator\bin\Debug\mendalian genetics simulator.exe
+C:\Users\james\source\repos\mendalian genetics simulator\mendalian genetics simulator\bin\Debug\mendalian genetics simulator.pdb
+C:\Users\james\source\repos\mendalian genetics simulator\mendalian genetics simulator\obj\Debug\mendalian genetics simulator.csprojAssemblyReference.cache
+C:\Users\james\source\repos\mendalian genetics simulator\mendalian genetics simulator\obj\Debug\mendalian_genetics_simulator.Form1.resources
+C:\Users\james\source\repos\mendalian genetics simulator\mendalian genetics simulator\obj\Debug\mendalian_genetics_simulator.Properties.Resources.resources
+C:\Users\james\source\repos\mendalian genetics simulator\mendalian genetics simulator\obj\Debug\mendalian genetics simulator.csproj.GenerateResource.cache
+C:\Users\james\source\repos\mendalian genetics simulator\mendalian genetics simulator\obj\Debug\mendalian genetics simulator.csproj.CoreCompileInputs.cache
+C:\Users\james\source\repos\mendalian genetics simulator\mendalian genetics simulator\obj\Debug\mendalian genetics simulator.exe
+C:\Users\james\source\repos\mendalian genetics simulator\mendalian genetics simulator\obj\Debug\mendalian genetics simulator.pdb
