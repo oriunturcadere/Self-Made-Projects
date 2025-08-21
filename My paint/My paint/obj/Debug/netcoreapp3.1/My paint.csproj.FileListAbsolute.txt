@@ -1,0 +1,16 @@
+C:\Users\james\source\repos\My paint\My paint\bin\Debug\netcoreapp3.1\My paint.exe
+C:\Users\james\source\repos\My paint\My paint\bin\Debug\netcoreapp3.1\My paint.deps.json
+C:\Users\james\source\repos\My paint\My paint\bin\Debug\netcoreapp3.1\My paint.runtimeconfig.json
+C:\Users\james\source\repos\My paint\My paint\bin\Debug\netcoreapp3.1\My paint.runtimeconfig.dev.json
+C:\Users\james\source\repos\My paint\My paint\bin\Debug\netcoreapp3.1\My paint.dll
+C:\Users\james\source\repos\My paint\My paint\bin\Debug\netcoreapp3.1\My paint.pdb
+C:\Users\james\source\repos\My paint\My paint\obj\Debug\netcoreapp3.1\My_paint.Form1.resources
+C:\Users\james\source\repos\My paint\My paint\obj\Debug\netcoreapp3.1\My paint.csproj.GenerateResource.cache
+C:\Users\james\source\repos\My paint\My paint\obj\Debug\netcoreapp3.1\My paint.AssemblyInfoInputs.cache
+C:\Users\james\source\repos\My paint\My paint\obj\Debug\netcoreapp3.1\My paint.AssemblyInfo.cs
+C:\Users\james\source\repos\My paint\My paint\obj\Debug\netcoreapp3.1\My paint.csproj.CoreCompileInputs.cache
+C:\Users\james\source\repos\My paint\My paint\obj\Debug\netcoreapp3.1\My paint.dll
+C:\Users\james\source\repos\My paint\My paint\obj\Debug\netcoreapp3.1\My paint.pdb
+C:\Users\james\source\repos\My paint\My paint\obj\Debug\netcoreapp3.1\My paint.genruntimeconfig.cache
+C:\Users\james\source\repos\My paint\My paint\obj\Debug\netcoreapp3.1\My paint.csproj.AssemblyReference.cache
+C:\Users\james\source\repos\My paint\My paint\obj\Debug\netcoreapp3.1\My paint.GeneratedMSBuildEditorConfig.editorconfig
