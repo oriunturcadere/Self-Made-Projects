@@ -1,0 +1,4440 @@
+Program.cs
+{
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Simple_Calc
+{
+    static class Program
+    {
+        /// <summary>
+        ///  The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
+        }
+    }
+}
+}
+
+Form1.Designer.cs
+{
+namespace Simple_Calc
+{
+    partial class Form1
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Add = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Back = new System.Windows.Forms.Button();
+            this.Forward = new System.Windows.Forms.Button();
+            this.Multiply = new System.Windows.Forms.Button();
+            this.Subtract = new System.Windows.Forms.Button();
+            this.Divide = new System.Windows.Forms.Button();
+            this.Square = new System.Windows.Forms.Button();
+            this.Cube = new System.Windows.Forms.Button();
+            this.Sqr = new System.Windows.Forms.Button();
+            this.Rooting = new System.Windows.Forms.Button();
+            this.Power = new System.Windows.Forms.Button();
+            this.Decimal = new System.Windows.Forms.CheckBox();
+            this.BigInt = new System.Windows.Forms.CheckBox();
+            this.GCD = new System.Windows.Forms.Button();
+            this.LCM = new System.Windows.Forms.Button();
+            this.Factorial = new System.Windows.Forms.Button();
+            this.Prime = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Infn = new System.Windows.Forms.CheckBox();
+            this.Inf = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.label1.Location = new System.Drawing.Point(12, 99);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 39);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "X:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.label2.Location = new System.Drawing.Point(12, 195);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 39);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Y:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(50)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.textBox1.Location = new System.Drawing.Point(68, 99);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(642, 54);
+            this.textBox1.TabIndex = 1;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(50)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.textBox2.Location = new System.Drawing.Point(68, 195);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox2.Size = new System.Drawing.Size(642, 54);
+            this.textBox2.TabIndex = 1;
+            // 
+            // Add
+            // 
+            this.Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.Add.FlatAppearance.BorderSize = 0;
+            this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Add.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(235)))), ((int)(((byte)(150)))));
+            this.Add.Location = new System.Drawing.Point(68, 383);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(260, 104);
+            this.Add.TabIndex = 2;
+            this.Add.Text = "X+Y";
+            this.Add.UseVisualStyleBackColor = false;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
+            // 
+            // button2
+            // 
+            this.button2.Enabled = false;
+            this.button2.Location = new System.Drawing.Point(749, 209);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(131, 40);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(204)))), ((int)(((byte)(134)))));
+            this.textBox3.Location = new System.Drawing.Point(68, 12);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(642, 66);
+            this.textBox3.TabIndex = 4;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // Back
+            // 
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(23)))), ((int)(((byte)(46)))));
+            this.Back.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Back.FlatAppearance.BorderSize = 0;
+            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(244)))), ((int)(((byte)(210)))));
+            this.Back.Location = new System.Drawing.Point(680, 295);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(111, 68);
+            this.Back.TabIndex = 5;
+            this.Back.Text = "<";
+            this.Back.UseVisualStyleBackColor = false;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
+            // Forward
+            // 
+            this.Forward.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(23)))), ((int)(((byte)(46)))));
+            this.Forward.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Forward.FlatAppearance.BorderSize = 0;
+            this.Forward.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Forward.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Forward.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(244)))), ((int)(((byte)(210)))));
+            this.Forward.Location = new System.Drawing.Point(797, 295);
+            this.Forward.Name = "Forward";
+            this.Forward.Size = new System.Drawing.Size(111, 68);
+            this.Forward.TabIndex = 5;
+            this.Forward.Text = ">";
+            this.Forward.UseVisualStyleBackColor = false;
+            this.Forward.Click += new System.EventHandler(this.Forward_Click);
+            // 
+            // Multiply
+            // 
+            this.Multiply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.Multiply.FlatAppearance.BorderSize = 0;
+            this.Multiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Multiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Multiply.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(235)))), ((int)(((byte)(150)))));
+            this.Multiply.Location = new System.Drawing.Point(358, 383);
+            this.Multiply.Name = "Multiply";
+            this.Multiply.Size = new System.Drawing.Size(260, 104);
+            this.Multiply.TabIndex = 2;
+            this.Multiply.Text = "X*Y";
+            this.Multiply.UseVisualStyleBackColor = false;
+            this.Multiply.Click += new System.EventHandler(this.Multiply_Click);
+            // 
+            // Subtract
+            // 
+            this.Subtract.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.Subtract.FlatAppearance.BorderSize = 0;
+            this.Subtract.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Subtract.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Subtract.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(235)))), ((int)(((byte)(150)))));
+            this.Subtract.Location = new System.Drawing.Point(68, 517);
+            this.Subtract.Name = "Subtract";
+            this.Subtract.Size = new System.Drawing.Size(260, 104);
+            this.Subtract.TabIndex = 2;
+            this.Subtract.Text = "X-Y";
+            this.Subtract.UseVisualStyleBackColor = false;
+            this.Subtract.Click += new System.EventHandler(this.Subtract_Click);
+            // 
+            // Divide
+            // 
+            this.Divide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.Divide.FlatAppearance.BorderSize = 0;
+            this.Divide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Divide.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Divide.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(235)))), ((int)(((byte)(150)))));
+            this.Divide.Location = new System.Drawing.Point(358, 517);
+            this.Divide.Name = "Divide";
+            this.Divide.Size = new System.Drawing.Size(260, 104);
+            this.Divide.TabIndex = 2;
+            this.Divide.Text = "X/Y";
+            this.Divide.UseVisualStyleBackColor = false;
+            this.Divide.Click += new System.EventHandler(this.Divide_Click);
+            // 
+            // Square
+            // 
+            this.Square.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.Square.FlatAppearance.BorderSize = 0;
+            this.Square.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Square.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Square.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(235)))), ((int)(((byte)(150)))));
+            this.Square.Location = new System.Drawing.Point(68, 651);
+            this.Square.Name = "Square";
+            this.Square.Size = new System.Drawing.Size(260, 104);
+            this.Square.TabIndex = 2;
+            this.Square.Text = "X^2";
+            this.Square.UseVisualStyleBackColor = false;
+            this.Square.Click += new System.EventHandler(this.Square_Click);
+            // 
+            // Cube
+            // 
+            this.Cube.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.Cube.FlatAppearance.BorderSize = 0;
+            this.Cube.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cube.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Cube.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(235)))), ((int)(((byte)(150)))));
+            this.Cube.Location = new System.Drawing.Point(358, 651);
+            this.Cube.Name = "Cube";
+            this.Cube.Size = new System.Drawing.Size(260, 104);
+            this.Cube.TabIndex = 2;
+            this.Cube.Text = "X^3";
+            this.Cube.UseVisualStyleBackColor = false;
+            this.Cube.Click += new System.EventHandler(this.Cube_Click);
+            // 
+            // Sqr
+            // 
+            this.Sqr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.Sqr.FlatAppearance.BorderSize = 0;
+            this.Sqr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sqr.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Sqr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(235)))), ((int)(((byte)(150)))));
+            this.Sqr.Location = new System.Drawing.Point(68, 782);
+            this.Sqr.Name = "Sqr";
+            this.Sqr.Size = new System.Drawing.Size(260, 104);
+            this.Sqr.TabIndex = 2;
+            this.Sqr.Text = "²√X";
+            this.Sqr.UseVisualStyleBackColor = false;
+            this.Sqr.Click += new System.EventHandler(this.Sqr_Click);
+            // 
+            // Rooting
+            // 
+            this.Rooting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.Rooting.FlatAppearance.BorderSize = 0;
+            this.Rooting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Rooting.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Rooting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(235)))), ((int)(((byte)(150)))));
+            this.Rooting.Location = new System.Drawing.Point(358, 782);
+            this.Rooting.Name = "Rooting";
+            this.Rooting.Size = new System.Drawing.Size(260, 104);
+            this.Rooting.TabIndex = 2;
+            this.Rooting.Text = "ʸ√X";
+            this.Rooting.UseVisualStyleBackColor = false;
+            this.Rooting.Click += new System.EventHandler(this.Rooting_Click);
+            // 
+            // Power
+            // 
+            this.Power.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.Power.FlatAppearance.BorderSize = 0;
+            this.Power.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Power.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Power.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(235)))), ((int)(((byte)(150)))));
+            this.Power.Location = new System.Drawing.Point(648, 651);
+            this.Power.Name = "Power";
+            this.Power.Size = new System.Drawing.Size(260, 104);
+            this.Power.TabIndex = 2;
+            this.Power.Text = "X^Y";
+            this.Power.UseVisualStyleBackColor = false;
+            this.Power.Click += new System.EventHandler(this.Power_Click);
+            // 
+            // Decimal
+            // 
+            this.Decimal.AutoSize = true;
+            this.Decimal.Checked = true;
+            this.Decimal.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Decimal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(240)))), ((int)(((byte)(200)))));
+            this.Decimal.Location = new System.Drawing.Point(68, 255);
+            this.Decimal.Name = "Decimal";
+            this.Decimal.Size = new System.Drawing.Size(114, 34);
+            this.Decimal.TabIndex = 6;
+            this.Decimal.Text = "Decimal";
+            this.Decimal.UseVisualStyleBackColor = true;
+            this.Decimal.CheckedChanged += new System.EventHandler(this.Decimal_CheckedChanged);
+            // 
+            // BigInt
+            // 
+            this.BigInt.AutoSize = true;
+            this.BigInt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(240)))), ((int)(((byte)(200)))));
+            this.BigInt.Location = new System.Drawing.Point(68, 295);
+            this.BigInt.Name = "BigInt";
+            this.BigInt.Size = new System.Drawing.Size(134, 34);
+            this.BigInt.TabIndex = 6;
+            this.BigInt.Text = "BigInteger";
+            this.BigInt.UseVisualStyleBackColor = true;
+            this.BigInt.CheckedChanged += new System.EventHandler(this.BigInt_CheckedChanged);
+            // 
+            // GCD
+            // 
+            this.GCD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.GCD.FlatAppearance.BorderSize = 0;
+            this.GCD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.GCD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(235)))), ((int)(((byte)(150)))));
+            this.GCD.Location = new System.Drawing.Point(648, 383);
+            this.GCD.Name = "GCD";
+            this.GCD.Size = new System.Drawing.Size(260, 104);
+            this.GCD.TabIndex = 2;
+            this.GCD.Text = "GCD";
+            this.GCD.UseVisualStyleBackColor = false;
+            this.GCD.Click += new System.EventHandler(this.GCD_Click);
+            // 
+            // LCM
+            // 
+            this.LCM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.LCM.FlatAppearance.BorderSize = 0;
+            this.LCM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LCM.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LCM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(235)))), ((int)(((byte)(150)))));
+            this.LCM.Location = new System.Drawing.Point(648, 517);
+            this.LCM.Name = "LCM";
+            this.LCM.Size = new System.Drawing.Size(260, 104);
+            this.LCM.TabIndex = 2;
+            this.LCM.Text = "LCM";
+            this.LCM.UseVisualStyleBackColor = false;
+            this.LCM.Click += new System.EventHandler(this.LCM_Click);
+            // 
+            // Factorial
+            // 
+            this.Factorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.Factorial.FlatAppearance.BorderSize = 0;
+            this.Factorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Factorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Factorial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(235)))), ((int)(((byte)(150)))));
+            this.Factorial.Location = new System.Drawing.Point(648, 782);
+            this.Factorial.Name = "Factorial";
+            this.Factorial.Size = new System.Drawing.Size(260, 104);
+            this.Factorial.TabIndex = 2;
+            this.Factorial.Text = "X!";
+            this.Factorial.UseVisualStyleBackColor = false;
+            this.Factorial.Click += new System.EventHandler(this.Factorial_Click);
+            // 
+            // Prime
+            // 
+            this.Prime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.Prime.FlatAppearance.BorderSize = 0;
+            this.Prime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Prime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Prime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(235)))), ((int)(((byte)(150)))));
+            this.Prime.Location = new System.Drawing.Point(68, 905);
+            this.Prime.Name = "Prime";
+            this.Prime.Size = new System.Drawing.Size(840, 104);
+            this.Prime.TabIndex = 2;
+            this.Prime.Text = "X == Prime?";
+            this.Prime.UseVisualStyleBackColor = false;
+            this.Prime.Click += new System.EventHandler(this.Prime_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(46)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(223)))), ((int)(((byte)(122)))));
+            this.button1.Location = new System.Drawing.Point(914, 383);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(181, 626);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "New Instance";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.New_Click);
+            // 
+            // Infn
+            // 
+            this.Infn.AutoSize = true;
+            this.Infn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(240)))), ((int)(((byte)(200)))));
+            this.Infn.Location = new System.Drawing.Point(68, 335);
+            this.Infn.Name = "Infn";
+            this.Infn.Size = new System.Drawing.Size(115, 34);
+            this.Infn.TabIndex = 6;
+            this.Infn.Text = "InfiNum";
+            this.Infn.UseVisualStyleBackColor = true;
+            this.Infn.CheckedChanged += new System.EventHandler(this.Infn_CheckedChanged);
+            // 
+            // Inf
+            // 
+            this.Inf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(45)))), ((int)(((byte)(69)))));
+            this.Inf.FlatAppearance.BorderSize = 0;
+            this.Inf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Inf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Inf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(160)))), ((int)(((byte)(198)))));
+            this.Inf.Location = new System.Drawing.Point(1035, 317);
+            this.Inf.Name = "Inf";
+            this.Inf.Size = new System.Drawing.Size(60, 60);
+            this.Inf.TabIndex = 2;
+            this.Inf.Text = "Info";
+            this.Inf.UseVisualStyleBackColor = false;
+            this.Inf.Click += new System.EventHandler(this.Inf_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.ClientSize = new System.Drawing.Size(1109, 1044);
+            this.Controls.Add(this.Inf);
+            this.Controls.Add(this.Infn);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Prime);
+            this.Controls.Add(this.Factorial);
+            this.Controls.Add(this.LCM);
+            this.Controls.Add(this.GCD);
+            this.Controls.Add(this.BigInt);
+            this.Controls.Add(this.Decimal);
+            this.Controls.Add(this.Power);
+            this.Controls.Add(this.Rooting);
+            this.Controls.Add(this.Sqr);
+            this.Controls.Add(this.Cube);
+            this.Controls.Add(this.Square);
+            this.Controls.Add(this.Divide);
+            this.Controls.Add(this.Subtract);
+            this.Controls.Add(this.Multiply);
+            this.Controls.Add(this.Forward);
+            this.Controls.Add(this.Back);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Add);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Form1";
+            this.Text = "Simple Calc";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.Button Forward;
+        private System.Windows.Forms.Button Multiply;
+        private System.Windows.Forms.Button Subtract;
+        private System.Windows.Forms.Button Divide;
+        private System.Windows.Forms.Button Square;
+        private System.Windows.Forms.Button Cube;
+        private System.Windows.Forms.Button Sqr;
+        private System.Windows.Forms.Button Rooting;
+        private System.Windows.Forms.Button Power;
+        private System.Windows.Forms.CheckBox Decimal;
+        private System.Windows.Forms.CheckBox BigInt;
+        private System.Windows.Forms.Button GCD;
+        private System.Windows.Forms.Button LCM;
+        private System.Windows.Forms.Button Factorial;
+        private System.Windows.Forms.Button Prime;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox Infn;
+        private System.Windows.Forms.Button Inf;
+    }
+}
+}
+
+Form1.cs
+{
+using System;
+using System.Drawing;
+using System.Numerics;
+using System.Windows.Forms;
+using System.Threading;
+
+namespace Simple_Calc
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        decimal x = 0;
+        decimal y = 0;
+
+        BigInteger x2 = 0;
+        BigInteger y2 = 0;
+
+        InfiNum x3 = new InfiNum();
+        InfiNum y3 = new InfiNum();
+
+        string[] xs = new string[0];
+        string[] ys = new string[0];
+        string[] ans = new string[0];
+
+        int place = 0;
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            decimal rad = 6371230;
+            decimal avg = Convert.ToDecimal(9.80665);
+
+            decimal dis = Convert.ToDecimal(textBox1.Text);
+
+            decimal step1 = rad / (rad + dis * 1000);
+
+            decimal step2 = step1 * step1;
+
+            decimal step3 = step2 * avg;
+
+            textBox2.Text = step3.ToString();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            Size size = TextRenderer.MeasureText(textBox3.Text, textBox3.Font);
+
+            if (size.Width != 0 && size.Width < 1852)
+            {
+                textBox3.Width = size.Width;
+            }
+
+            if (size.Width > 1852)
+            {
+                textBox3.Width = 1852;
+                textBox3.ScrollBars = ScrollBars.Vertical;
+            }
+
+            else
+            {
+                textBox3.ScrollBars = ScrollBars.None;
+            }
+        }
+
+        private void Add_Click(object sender, EventArgs e)
+        {
+            if (Decimal.Checked)
+            {
+                if (decimal.TryParse(textBox1.Text, out decimal t1) && decimal.TryParse(textBox2.Text, out decimal t2))
+                {
+                    x = t1;
+                    y = t2;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x.ToString();
+                        ys[ys.Length - 1] = y.ToString();
+                        ans[ans.Length - 1] = (x + y).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x.ToString();
+                        yt[place] = y.ToString();
+                        anst[place] = (x + y).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (BigInt.Checked)
+            {
+                if (BigInteger.TryParse(textBox1.Text, out BigInteger t1) && BigInteger.TryParse(textBox2.Text, out BigInteger t2))
+                {
+                    x2 = t1;
+                    y2 = t2;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x2.ToString();
+                        ys[ys.Length - 1] = y2.ToString();
+                        ans[ans.Length - 1] = (x2 + y2).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x2.ToString();
+                        yt[place] = y2.ToString();
+                        anst[place] = (x2 + y2).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (Infn.Checked)
+            {
+                InfiNum t1 = new InfiNum();
+                InfiNum t2 = new InfiNum();
+
+                t1.Value = textBox1.Text;
+                t2.Value = textBox2.Text;
+
+                if (t1._0 == false && t2._0 == false)
+                {
+                    x3.Value = t1.Value;
+                    y3.Value = t2.Value;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x3.Value;
+                        ys[ys.Length - 1] = y3.Value;
+                        ans[ans.Length - 1] = x3.Add(y3.Value);
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x3.Value;
+                        yt[place] = y3.Value;
+                        anst[place] = x3.Add(y3.Value);
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            if (place != 0)
+            {
+                place--;
+                textBox1.Text = xs[place].ToString();
+
+                if (ys[place] == null)
+                {
+                    textBox2.Text = "";
+                }
+
+                else
+                {
+                    textBox2.Text = ys[place].ToString();
+                }
+
+                textBox3.Text = ans[place].ToString();
+            }
+        }
+
+        private void Forward_Click(object sender, EventArgs e)
+        {
+            if (place != ans.Length - 1 && ans.Length != 0)
+            {
+                place++;
+                textBox1.Text = xs[place].ToString();
+
+                if (ys[place] == null)
+                {
+                    textBox2.Text = "";
+                }
+
+                else
+                {
+                    textBox2.Text = ys[place].ToString();
+                }
+
+                textBox3.Text = ans[place].ToString();
+            }
+        }
+
+        private void Multiply_Click(object sender, EventArgs e)
+        {
+            if (Decimal.Checked)
+            {
+                if (decimal.TryParse(textBox1.Text, out decimal t1) && decimal.TryParse(textBox2.Text, out decimal t2))
+                {
+                    x = t1;
+                    y = t2;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x.ToString();
+                        ys[ys.Length - 1] = y.ToString();
+                        ans[ans.Length - 1] = (x * y).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x.ToString();
+                        yt[place] = y.ToString();
+                        anst[place] = (x * y).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (BigInt.Checked)
+            {
+                if (BigInteger.TryParse(textBox1.Text, out BigInteger t1) && BigInteger.TryParse(textBox2.Text, out BigInteger t2))
+                {
+                    x2 = t1;
+                    y2 = t2;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x2.ToString();
+                        ys[ys.Length - 1] = y2.ToString();
+                        ans[ans.Length - 1] = (x2 * y2).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x2.ToString();
+                        yt[place] = y2.ToString();
+                        anst[place] = (x2 * y2).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (Infn.Checked)
+            {
+                InfiNum t1 = new InfiNum();
+                InfiNum t2 = new InfiNum();
+
+                t1.Value = textBox1.Text;
+                t2.Value = textBox2.Text;
+
+                if (t1._0 == false && t2._0 == false)
+                {
+                    x3.Value = t1.Value;
+                    y3.Value = t2.Value;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x3.Value;
+                        ys[ys.Length - 1] = y3.Value;
+                        ans[ans.Length - 1] = x3.Multiply(y3.Value);
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x3.Value;
+                        yt[place] = y3.Value;
+                        anst[place] = x3.Multiply(y3.Value);
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void Subtract_Click(object sender, EventArgs e)
+        {
+            if (Decimal.Checked)
+            {
+                if (decimal.TryParse(textBox1.Text, out decimal t1) && decimal.TryParse(textBox2.Text, out decimal t2))
+                {
+                    x = t1;
+                    y = t2;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x.ToString();
+                        ys[ys.Length - 1] = y.ToString();
+                        ans[ans.Length - 1] = (x - y).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x.ToString();
+                        yt[place] = y.ToString();
+                        anst[place] = (x - y).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (BigInt.Checked)
+            {
+                if (BigInteger.TryParse(textBox1.Text, out BigInteger t1) && BigInteger.TryParse(textBox2.Text, out BigInteger t2))
+                {
+                    x2 = t1;
+                    y2 = t2;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x2.ToString();
+                        ys[ys.Length - 1] = y2.ToString();
+                        ans[ans.Length - 1] = (x2 - y2).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x2.ToString();
+                        yt[place] = y2.ToString();
+                        anst[place] = (x2 - y2).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (Infn.Checked)
+            {
+                InfiNum t1 = new InfiNum();
+                InfiNum t2 = new InfiNum();
+
+                t1.Value = textBox1.Text;
+                t2.Value = textBox2.Text;
+
+                if (t1._0 == false && t2._0 == false)
+                {
+                    x3.Value = t1.Value;
+                    y3.Value = t2.Value;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x3.Value;
+                        ys[ys.Length - 1] = y3.Value;
+                        ans[ans.Length - 1] = x3.Subtract(y3.Value);
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x3.Value;
+                        yt[place] = y3.Value;
+                        anst[place] = x3.Subtract(y3.Value);
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void Divide_Click(object sender, EventArgs e)
+        {
+            if (Decimal.Checked)
+            {
+                if (decimal.TryParse(textBox1.Text, out decimal t1) && decimal.TryParse(textBox2.Text, out decimal t2))
+                {
+                    x = t1;
+                    y = t2;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x.ToString();
+                        ys[ys.Length - 1] = y.ToString();
+                        ans[ans.Length - 1] = (x / y).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x.ToString();
+                        yt[place] = y.ToString();
+                        anst[place] = (x / y).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (BigInt.Checked)
+            {
+                if (BigInteger.TryParse(textBox1.Text, out BigInteger t1) && BigInteger.TryParse(textBox2.Text, out BigInteger t2))
+                {
+                    x2 = t1;
+                    y2 = t2;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x2.ToString();
+                        ys[ys.Length - 1] = y2.ToString();
+                        ans[ans.Length - 1] = (x2 / y2).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x2.ToString();
+                        yt[place] = y2.ToString();
+                        anst[place] = (x2 / y2).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (Infn.Checked)
+            {
+                InfiNum t1 = new InfiNum();
+                InfiNum t2 = new InfiNum();
+
+                t1.Value = textBox1.Text;
+                t2.Value = textBox2.Text;
+
+                if (t1._0 == false && t2._0 == false)
+                {
+                    x3.Value = t1.Value;
+                    y3.Value = t2.Value;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x3.Value;
+                        ys[ys.Length - 1] = y3.Value;
+                        ans[ans.Length - 1] = x3.Divide(y3.Value);
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x3.Value;
+                        yt[place] = y3.Value;
+                        anst[place] = x3.Divide(y3.Value);
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void Square_Click(object sender, EventArgs e)
+        {
+            if (Decimal.Checked)
+            {
+                if (decimal.TryParse(textBox1.Text, out decimal t1))
+                {
+                    x = t1;
+                    y = 0;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x.ToString();
+                        ys[ys.Length - 1] = y.ToString();
+                        ans[ans.Length - 1] = (x * x).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x.ToString();
+                        yt[place] = y.ToString();
+                        anst[place] = (x * x).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (BigInt.Checked)
+            {
+                if (BigInteger.TryParse(textBox1.Text, out BigInteger t1))
+                {
+                    x2 = t1;
+                    y2 = 0;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x2.ToString();
+                        ys[ys.Length - 1] = y2.ToString();
+                        ans[ans.Length - 1] = (x2 * x2).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x2.ToString();
+                        yt[place] = y2.ToString();
+                        anst[place] = (x2 * x2).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (Infn.Checked)
+            {
+                InfiNum t1 = new InfiNum();
+
+                t1.Value = textBox1.Text;
+
+                if (t1._0 == false)
+                {
+                    x3.Value = t1.Value;
+                    y3.Value = "0";
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x3.Value;
+                        ys[ys.Length - 1] = y3.Value;
+                        ans[ans.Length - 1] = x3.Multiply(x3.Value);
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x3.Value;
+                        yt[place] = y3.Value;
+                        anst[place] = x3.Multiply(x3.Value);
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void Cube_Click(object sender, EventArgs e)
+        {
+            if (Decimal.Checked)
+            {
+                if (decimal.TryParse(textBox1.Text, out decimal t1))
+                {
+                    x = t1;
+                    y = 0;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x.ToString();
+                        ys[ys.Length - 1] = y.ToString();
+                        ans[ans.Length - 1] = (x * x * x).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x.ToString();
+                        yt[place] = y.ToString();
+                        anst[place] = (x * x * x).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (BigInt.Checked)
+            {
+                if (BigInteger.TryParse(textBox1.Text, out BigInteger t1))
+                {
+                    x2 = t1;
+                    y2 = 0;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x2.ToString();
+                        ys[ys.Length - 1] = y2.ToString();
+                        ans[ans.Length - 1] = (x2 * x2 * x2).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x.ToString();
+                        yt[place] = y.ToString();
+                        anst[place] = (x2 * x2 * x2).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (Infn.Checked)
+            {
+                InfiNum t1 = new InfiNum();
+
+                t1.Value = textBox1.Text;
+
+                if (t1._0 == false)
+                {
+                    x3.Value = t1.Value;
+                    y3.Value = "0";
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x3.Value;
+                        ys[ys.Length - 1] = y3.Value;
+                        ans[ans.Length - 1] = x3.Multiply(x3.Multiply(x3.Value));
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x3.Value;
+                        yt[place] = y3.Value;
+                        anst[place] = x3.Multiply(x3.Multiply(x3.Value));
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void Power_Click(object sender, EventArgs e)
+        {
+            if (Decimal.Checked)
+            {
+                if (decimal.TryParse(textBox1.Text, out decimal t1) && decimal.TryParse(textBox2.Text, out decimal t2) && BigInteger.TryParse(textBox2.Text, out BigInteger t3))
+                {
+                    x = t1;
+                    y = t2;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x.ToString();
+                        ys[ys.Length - 1] = y.ToString();
+
+                        if (y < 1)
+                        {
+                            if (y == 0)
+                            {
+                                ans[ans.Length - 1] = "1";
+                            }
+
+                            else
+                            {
+                                ans[ans.Length - 1] = x.ToString();
+
+                                decimal t = Math.Abs(x);
+
+                                for (int i = 1; i < Math.Abs(y); i++)
+                                {
+                                    t = t * x;
+                                }
+
+                                ans[ans.Length - 1] = (x / t).ToString();
+                            }
+                        }
+
+                        else
+                        {
+                            ans[ans.Length - 1] = x.ToString();
+
+                            for (int i = 1; i < y; i++)
+                            {
+                                ans[ans.Length - 1] = (Convert.ToDecimal(ans[ans.Length - 1]) * x).ToString();
+                            }
+                        }
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[xt.Length - 1] = x.ToString();
+                        yt[yt.Length - 1] = y.ToString();
+
+                        if (y < 1)
+                        {
+                            if (y == 0)
+                            {
+                                anst[anst.Length - 1] = "1";
+                            }
+
+                            else
+                            {
+                                anst[anst.Length - 1] = x.ToString();
+
+                                decimal t = x;
+
+                                for (int i = 1; i < Math.Abs(y); i++)
+                                {
+                                    t = t * x;
+                                }
+
+                                anst[anst.Length - 1] = (x / t).ToString();
+                            }
+                        }
+
+                        else
+                        {
+                            anst[anst.Length - 1] = x.ToString();
+
+                            for (int i = 1; i < y; i++)
+                            {
+                                anst[anst.Length - 1] = (Convert.ToDecimal(anst[anst.Length - 1]) * x).ToString();
+                            }
+                        }
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (BigInt.Checked)
+            {
+                if (BigInteger.TryParse(textBox1.Text, out BigInteger t1) && BigInteger.TryParse(textBox2.Text, out BigInteger t2))
+                {
+                    x2 = t1;
+                    y2 = t2;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x2.ToString();
+                        ys[ys.Length - 1] = y2.ToString();
+
+                        if (y2 < 1)
+                        {
+                            if (y2 == 0)
+                            {
+                                ans[ans.Length - 1] = "1";
+                            }
+
+                            else
+                            {
+                                ans[ans.Length - 1] = x2.ToString();
+
+                                BigInteger t = x2;
+
+                                for (int i = 1; i < BigInteger.Abs(y2); i++)
+                                {
+                                    t = t * x2;
+                                }
+
+                                ans[ans.Length - 1] = (x2 / t).ToString();
+                            }
+                        }
+
+                        else
+                        {
+                            ans[ans.Length - 1] = x2.ToString();
+
+                            for (int i = 1; i < y2; i++)
+                            {
+                                ans[ans.Length - 1] = (BigInteger.Parse(ans[ans.Length - 1]) * x2).ToString();
+                            }
+                        }
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[xt.Length - 1] = x2.ToString();
+                        yt[yt.Length - 1] = y2.ToString();
+
+                        if (y2 < 1)
+                        {
+                            if (y2 == 0)
+                            {
+                                anst[anst.Length - 1] = "1";
+                            }
+
+                            else
+                            {
+                                anst[anst.Length - 1] = x2.ToString();
+
+                                BigInteger t = x2;
+
+                                for (int i = 1; i < BigInteger.Abs(y2); i++)
+                                {
+                                    t = t * x2;
+                                }
+
+                                anst[anst.Length - 1] = (x2 / t).ToString();
+                            }
+                        }
+
+                        else
+                        {
+                            anst[anst.Length - 1] = x2.ToString();
+
+                            for (int i = 1; i < y2; i++)
+                            {
+                                anst[anst.Length - 1] = (BigInteger.Parse(anst[anst.Length - 1]) * x2).ToString();
+                            }
+                        }
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (Infn.Checked)
+            {
+                InfiNum t1 = new InfiNum();
+                InfiNum t2 = new InfiNum();
+
+                t1.Value = textBox1.Text;
+                t2.Value = textBox2.Text;
+
+                if (t1._0 == false && t2._0 == false && BigInteger.TryParse(textBox2.Text, out BigInteger t3))
+                {
+                    x3.Value = t1.Value;
+                    y3.Value = t2.Value;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x3.Value;
+                        ys[ys.Length - 1] = y3.Value;
+
+                        if (y3.Smaller("1"))
+                        {
+                            if (y3.Value == "0.000000000000000000000000000000")
+                            {
+                                ans[ans.Length - 1] = "1.000000000000000000000000000000";
+                            }
+
+                            else
+                            {
+                                ans[ans.Length - 1] = x3.Value;
+
+                                InfiNum t = new InfiNum();
+                                t.Value = x3.Value;
+
+                                InfiNum i1 = new InfiNum();
+
+                                InfiNum absh1 = new InfiNum();
+                                absh1.Value = i1.Subtract(y3.Value);
+
+                                for (i1.Value = "1"; i1.Smaller(absh1.Value); i1.Value = i1.Add("1"))
+                                {
+                                    t.Value = t.Multiply(x3.Value);
+                                }
+
+                                ans[ans.Length - 1] = x3.Divide(t.Value);
+                            }
+                        }
+
+                        else
+                        {
+                            ans[ans.Length - 1] = x3.Value;
+
+                            InfiNum i1 = new InfiNum();
+
+                            for (i1.Value = "1"; i1.Smaller(y3.Value); i1.Value = i1.Add("1"))
+                            {
+                                InfiNum a = new InfiNum();
+                                a.Value = ans[ans.Length - 1];
+                                ans[ans.Length - 1] = a.Multiply(x3.Value);
+                            }
+                        }
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[xt.Length - 1] = x3.Value;
+                        yt[yt.Length - 1] = y3.Value;
+
+                        if (y3.Smaller("1"))
+                        {
+                            if (y3.Value == "0.000000000000000000000000000000")
+                            {
+                                anst[anst.Length - 1] = "1.000000000000000000000000000000";
+                            }
+
+                            else
+                            {
+                                anst[anst.Length - 1] = x3.Value;
+
+                                InfiNum t = new InfiNum();
+                                t.Value = x3.Value;
+
+                                InfiNum i1 = new InfiNum();
+
+                                InfiNum absh1 = new InfiNum();
+                                absh1.Value = i1.Subtract(y3.Value);
+
+                                for (i1.Value = "1"; i1.Smaller(absh1.Value); i1.Value = i1.Add("1"))
+                                {
+                                    t.Value = t.Multiply(x3.Value);
+                                }
+
+                                anst[anst.Length - 1] = x3.Divide(t.Value);
+                            }
+                        }
+
+                        else
+                        {
+                            anst[anst.Length - 1] = x3.Value;
+
+                            InfiNum i1 = new InfiNum();
+
+                            for (i1.Value = "1"; i1.Smaller(y3.Value); i1.Value = i1.Add("1"))
+                            {
+                                InfiNum a = new InfiNum();
+                                a.Value = anst[anst.Length - 1];
+                                anst[anst.Length - 1] = a.Multiply(x3.Value);
+                            }
+                        }
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        bool stop = false;
+
+        private void Decimal_CheckedChanged(object sender, EventArgs e)
+        {
+            if (stop == false)
+            {
+                if (Decimal.Checked == true)
+                {
+                    stop = true;
+
+                    BigInt.Checked = false;
+                    Infn.Checked = false;
+                    Sqr.Enabled = true;
+                    Rooting.Enabled = true;
+
+                    stop = false;
+                }
+
+                else
+                {
+                    Decimal.Checked = true;
+                }
+            }
+        }
+
+        private void BigInt_CheckedChanged(object sender, EventArgs e)
+        {
+            if (stop == false)
+            {
+                if (BigInt.Checked == true)
+                {
+                    stop = true;
+
+                    Decimal.Checked = false;
+                    Infn.Checked = false;
+                    Sqr.Enabled = false;
+                    Rooting.Enabled = false;
+
+                    stop = false;
+                }
+
+                else
+                {
+                    BigInt.Checked = true;
+                }
+            }
+        }
+
+        private void Sqr_Click(object sender, EventArgs e)
+        {
+            if (Decimal.Checked)
+            {
+                if (decimal.TryParse(textBox1.Text, out decimal t1))
+                {
+                    x = t1;
+                    y = 0;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x.ToString();
+                        ys[ys.Length - 1] = y.ToString();
+
+                        Root t = new Root();
+                        t.Rt(x, 2, out decimal sqr);
+
+                        ans[ans.Length - 1] = (sqr).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x.ToString();
+                        ys[ys.Length - 1] = y.ToString();
+
+                        Root t = new Root();
+                        t.Rt(x, 2, out decimal r);
+
+                        anst[anst.Length - 1] = (r).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            else if (Infn.Checked)
+            {
+                InfiNum t1 = new InfiNum();
+                InfiNum t2 = new InfiNum();
+
+                t1.Value = textBox1.Text;
+                t2.Value = textBox2.Text;
+
+                if (t1._0 == false && t2._0 == false)
+                {
+                    x3.Value = t1.Value;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x3.Value;
+                        ys[ys.Length - 1] = y3.Value;
+
+                        ans[ans.Length - 1] = (x3.Root("2")).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x.ToString();
+                        ys[ys.Length - 1] = y3.Value;
+
+                        anst[anst.Length - 1] = (x3.Root("2")).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void Rooting_Click(object sender, EventArgs e)
+        {
+            if (Decimal.Checked)
+            {
+                if (decimal.TryParse(textBox1.Text, out decimal t1) && decimal.TryParse(textBox2.Text, out decimal t2) && BigInteger.TryParse(textBox2.Text, out BigInteger t3))
+                {
+                    x = t1;
+                    y = t2;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x.ToString();
+                        ys[ys.Length - 1] = y.ToString();
+
+                        Root t = new Root();
+                        t.Rt(x, y, out decimal sqr);
+
+                        ans[ans.Length - 1] = (sqr).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x.ToString();
+                        yt[place] = y.ToString();
+
+                        Root t = new Root();
+                        t.Rt(x, y, out decimal sqr);
+
+                        ans[ans.Length - 1] = (sqr).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            else if (Infn.Checked)
+            {
+                InfiNum t1 = new InfiNum();
+                InfiNum t2 = new InfiNum();
+
+                t1.Value = textBox1.Text;
+                t2.Value = textBox2.Text;
+
+                if (t1._0 == false && t2._0 == false && BigInteger.TryParse(textBox2.Text, out BigInteger t3))
+                {
+                    x3.Value = t1.Value;
+                    y3.Value = t2.Value;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x3.Value;
+                        ys[ys.Length - 1] = y3.Value;
+
+                        ans[ans.Length - 1] = (x3.Root(y3.Value));
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x3.Value;
+                        yt[place] = y3.Value;
+
+                        ans[ans.Length - 1] = (x3.Root(y3.Value)).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void GCD_Click(object sender, EventArgs e)
+        {
+            if (Decimal.Checked)
+            {
+                if ((decimal.TryParse(textBox1.Text, out decimal t1) && decimal.TryParse(textBox2.Text, out decimal t2)) && (BigInteger.TryParse(textBox1.Text, out BigInteger t3) && BigInteger.TryParse(textBox2.Text, out BigInteger t4)))
+                {
+                    x2 = t3;
+                    y2 = t4;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x2.ToString();
+                        ys[ys.Length - 1] = y2.ToString();
+
+                        GCDiv t = new GCDiv();
+                        t.GreatestCD(x2, y2, out BigInteger res);
+
+                        ans[ans.Length - 1] = (res).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x.ToString();
+                        yt[place] = y.ToString();
+
+                        GCDiv t = new GCDiv();
+                        t.GreatestCD(x2, y2, out BigInteger res);
+
+                        anst[anst.Length - 1] = (res).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (BigInt.Checked)
+            {
+                if (BigInteger.TryParse(textBox1.Text, out BigInteger t1) && BigInteger.TryParse(textBox2.Text, out BigInteger t2))
+                {
+                    x2 = t1;
+                    y2 = t2;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x2.ToString();
+                        ys[ys.Length - 1] = y2.ToString();
+
+                        GCDiv t = new GCDiv();
+                        t.GreatestCD(x2, y2, out BigInteger res);
+
+                        ans[ans.Length - 1] = (res).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x2.ToString();
+                        yt[place] = y2.ToString();
+
+                        GCDiv t = new GCDiv();
+                        t.GreatestCD(x2, y2, out BigInteger res);
+
+                        anst[anst.Length - 1] = (res).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (Infn.Checked)
+            {
+                InfiNum t3 = new InfiNum();
+                InfiNum t4 = new InfiNum();
+
+                t3.Value = textBox1.Text;
+                t4.Value = textBox2.Text;
+
+                if (t3._0 == false && t4._0 == false && BigInteger.TryParse(textBox1.Text, out BigInteger t1) && BigInteger.TryParse(textBox2.Text, out BigInteger t2))
+                {
+                    x2 = t1;
+                    y2 = t2;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x2.ToString();
+                        ys[ys.Length - 1] = y2.ToString();
+
+                        GCDiv t = new GCDiv();
+                        t.GreatestCD(x2, y2, out BigInteger res);
+
+                        ans[ans.Length - 1] = (res).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x2.ToString();
+                        yt[place] = y2.ToString();
+
+                        GCDiv t = new GCDiv();
+                        t.GreatestCD(x2, y2, out BigInteger res);
+
+                        anst[anst.Length - 1] = (res).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void LCM_Click(object sender, EventArgs e)
+        {
+            if (Decimal.Checked)
+            {
+                if ((decimal.TryParse(textBox1.Text, out decimal t1) && decimal.TryParse(textBox2.Text, out decimal t2)) && (BigInteger.TryParse(textBox1.Text, out BigInteger t3) && BigInteger.TryParse(textBox2.Text, out BigInteger t4)))
+                {
+                    x2 = t3;
+                    y2 = t4;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x2.ToString();
+                        ys[ys.Length - 1] = y2.ToString();
+
+                        LCMultiple t = new LCMultiple();
+                        t.LeastCM(x2, y2, out BigInteger res);
+
+                        ans[ans.Length - 1] = (res).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x.ToString();
+                        yt[place] = y.ToString();
+
+                        LCMultiple t = new LCMultiple();
+                        t.LeastCM(x2, y2, out BigInteger res);
+
+                        anst[anst.Length - 1] = (res).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (BigInt.Checked)
+            {
+                if (BigInteger.TryParse(textBox1.Text, out BigInteger t1) && BigInteger.TryParse(textBox2.Text, out BigInteger t2))
+                {
+                    x2 = t1;
+                    y2 = t2;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x2.ToString();
+                        ys[ys.Length - 1] = y2.ToString();
+
+                        LCMultiple t = new LCMultiple();
+                        t.LeastCM(x2, y2, out BigInteger res);
+
+                        ans[ans.Length - 1] = (res).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x2.ToString();
+                        yt[place] = y2.ToString();
+
+                        LCMultiple t = new LCMultiple();
+                        t.LeastCM(x2, y2, out BigInteger res);
+
+                        anst[anst.Length - 1] = (res).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (Infn.Checked)
+            {
+                InfiNum t3 = new InfiNum();
+                InfiNum t4 = new InfiNum();
+
+                t3.Value = textBox1.Text;
+                t4.Value = textBox2.Text;
+
+                if (t3._0 == false && t4._0 == false && BigInteger.TryParse(textBox1.Text, out BigInteger t1) && BigInteger.TryParse(textBox2.Text, out BigInteger t2))
+                {
+                    x2 = t1;
+                    y2 = t2;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x2.ToString();
+                        ys[ys.Length - 1] = y2.ToString();
+
+                        LCMultiple t = new LCMultiple();
+                        t.LeastCM(x2, y2, out BigInteger res);
+
+                        ans[ans.Length - 1] = (res).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x2.ToString();
+                        yt[place] = y2.ToString();
+
+                        LCMultiple t = new LCMultiple();
+                        t.LeastCM(x2, y2, out BigInteger res);
+
+                        anst[anst.Length - 1] = (res).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void Factorial_Click(object sender, EventArgs e)
+        {
+            if (Decimal.Checked)
+            {
+                if (decimal.TryParse(textBox1.Text, out decimal t1))
+                {
+                    x = t1;
+                    y = 0;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x.ToString();
+                        ys[ys.Length - 1] = y.ToString();
+
+                        ans[place] = (x).ToString();
+
+                        for (int i = 2; i < x; i++)
+                        {
+                            ans[place] = (Convert.ToDecimal(ans[place]) * i).ToString();
+                        }
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x.ToString();
+                        yt[place] = y.ToString();
+
+                        anst[place] = (x).ToString();
+
+                        for (int i = 2; i < x; i++)
+                        {
+                            anst[place] = (Convert.ToDecimal(anst[place]) * i).ToString();
+                        }
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (BigInt.Checked)
+            {
+                if (BigInteger.TryParse(textBox1.Text, out BigInteger t1))
+                {
+                    x2 = t1;
+                    y2 = 0;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x2.ToString();
+                        ys[ys.Length - 1] = y2.ToString();
+
+                        ans[place] = (x2).ToString();
+
+                        for (int i = 2; i < x2; i++)
+                        {
+                            ans[place] = (BigInteger.Parse(ans[place]) * i).ToString();
+                        }
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x2.ToString();
+                        yt[place] = y2.ToString();
+
+                        anst[place] = (x2).ToString();
+
+                        for (int i = 2; i < x2; i++)
+                        {
+                            anst[place] = (BigInteger.Parse(anst[place]) * i).ToString();
+                        }
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (Infn.Checked)
+            {
+                InfiNum t3 = new InfiNum();
+
+                t3.Value = textBox1.Text;
+
+                if (t3._0 == false && BigInteger.TryParse(textBox1.Text, out BigInteger t1))
+                {
+                    x3.Value = t3.Value;
+                    y3.Value = "0";
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x3.Value;
+                        ys[ys.Length - 1] = y3.Value;
+
+                        ans[place] = x3.Value;
+
+                        InfiNum i1 = new InfiNum();
+
+                        for (i1.Value = "2"; i1.Smaller(x3.Value); i1.Value = i1.Add("1"))
+                        {
+                            ans[place] = i1.Multiply(ans[place]);
+                        }
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x3.Value;
+                        yt[place] = y3.Value;
+
+                        anst[place] = x3.Value;
+
+                        InfiNum i1 = new InfiNum();
+
+                        for (i1.Value = "2"; i1.Smaller(x3.Value); i1.Value = i1.Add("1"))
+                        {
+                            anst[place] = i1.Multiply(anst[place]);
+                        }
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void Prime_Click(object sender, EventArgs e)
+        {
+            if (Decimal.Checked)
+            {
+                if (decimal.TryParse(textBox1.Text, out decimal t1) && BigInteger.TryParse(textBox1.Text, out BigInteger t3))
+                {
+                    x2 = t3;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x.ToString();
+                        ys[ys.Length - 1] = y.ToString();
+
+                        PrimeNumbers lt = new PrimeNumbers();
+                        lt.Prime_13_(x2, out string primej, out int res);
+
+                        ans[ans.Length - 1] = (primej).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x.ToString();
+                        yt[place] = y.ToString();
+
+                        PrimeNumbers lt = new PrimeNumbers();
+                        lt.Prime_13_(x2, out string primej, out int res);
+
+                        anst[anst.Length - 1] = (primej).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (BigInt.Checked)
+            {
+                if (BigInteger.TryParse(textBox1.Text, out BigInteger t1))
+                {
+                    x2 = t1;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x2.ToString();
+                        ys[ys.Length - 1] = y2.ToString();
+
+                        PrimeNumbers lt = new PrimeNumbers();
+                        lt.Prime_13_(x2, out string primej, out int res);
+
+                        ans[ans.Length - 1] = (primej).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x2.ToString();
+                        yt[place] = y2.ToString();
+
+                        PrimeNumbers lt = new PrimeNumbers();
+                        lt.Prime_13_(x2, out string primej, out int res);
+
+                        anst[anst.Length - 1] = (primej).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (Infn.Checked)
+            {
+                InfiNum t3 = new InfiNum();
+
+                t3.Value = textBox1.Text;
+
+                if (t3._0 == false && BigInteger.TryParse(textBox1.Text, out BigInteger t1))
+                {
+                    x2 = t1;
+
+                    if (ans.Length - 1 == place)
+                    {
+                        Array.Resize(ref xs, xs.Length + 1);
+                        Array.Resize(ref ys, ys.Length + 1);
+                        Array.Resize(ref ans, ans.Length + 1);
+
+                        place++;
+
+                        xs[xs.Length - 1] = x2.ToString();
+                        ys[ys.Length - 1] = y2.ToString();
+
+                        PrimeNumbers lt = new PrimeNumbers();
+                        lt.Prime_13_(x2, out string primej, out int res);
+
+                        ans[ans.Length - 1] = (primej).ToString();
+                    }
+
+                    else
+                    {
+                        string[] xt = new string[place + 1];
+                        string[] yt = new string[place + 1];
+                        string[] anst = new string[place + 1];
+
+                        for (int i = 0; i < place; i++)
+                        {
+                            xt[i] = xs[i];
+                            yt[i] = ys[i];
+                            anst[i] = ans[i];
+                        }
+
+                        xt[place] = x2.ToString();
+                        yt[place] = y2.ToString();
+
+                        PrimeNumbers lt = new PrimeNumbers();
+                        lt.Prime_13_(x2, out string primej, out int res);
+
+                        anst[anst.Length - 1] = (primej).ToString();
+
+                        xs = xt;
+                        ys = yt;
+                        ans = anst;
+                    }
+
+                    textBox3.Text = ans[ans.Length - 1].ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid Input", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void New_Click(object sender, EventArgs e)
+        {
+            Form1 d = new Form1();
+            d.Show();
+        }
+
+        private void Thread1()
+        {
+            Form1 d = new Form1();
+            d.Show();
+        }
+
+        private void Inf_Click(object sender, EventArgs e)
+        {
+            Info d = new Info();
+            d.Show();
+        }
+
+        private void Infn_CheckedChanged(object sender, EventArgs e)
+        {
+            if (stop == false)
+            {
+                if (Infn.Checked == true)
+                {
+                    stop = true;
+
+                    Decimal.Checked = false;
+                    BigInt.Checked = false;
+                    Sqr.Enabled = true;
+                    Rooting.Enabled = true;
+
+                    stop = false;
+                }
+
+                else
+                {
+                    Infn.Checked = true;
+                }
+            }
+        }
+    }
+}
+}
+
+PrimeNumbers.cs
+{
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Numerics;
+
+namespace Simple_Calc
+{
+    class PrimeNumbers
+    {
+        public void Prime_13_(BigInteger n, out string primej, out int res)
+        {
+            bool u = false;
+
+            BigInteger h = n / 2;
+            primej = "";
+            res = 0;
+
+            if (n < 2)
+            {
+                if (n == 1 | true | n == 0)
+                {
+                    primej = "This number is nor prime nor composite";
+                    res = 1;
+                }
+
+            }
+
+            if (n == 2)
+            {
+                primej = "This number is prime";
+                res = 3;
+            }
+
+            if (n > 2)
+            {
+                BigInteger x = h * 2;
+
+                if (x == n)
+                {
+                    primej = "This number is composite. The smallest divisor, greater than 1 is 2";
+                    res = 2;
+                }
+
+                if (x != n) // there's been a BigInteger part in the quotient
+                {
+                    BigInteger k = 3;
+                    BigInteger y = k;
+
+                    BigInteger w = n / y;
+
+                    //if (checkBox1.Checked == true)
+                    //{
+                    for (k = 3; k <= w; k = k + 2)
+                    {
+                        BigInteger qu = k / 3;   //   for big prime numbers
+                        BigInteger g = k / 5;    // 
+
+                        if (((k != qu * 3) | true | (k == 3)) && ((k != g * 5 && g != 0) | true | (k == 5)))
+                        {
+                            BigInteger i = n / k;
+                            BigInteger t = k * i;
+
+                            if (t == n)
+                            {
+                                primej = "This number is composite. The smallest divisor, greater than 1 is " + k.ToString();
+                                res = 2;
+                                u = true;
+                                break;
+                            }
+
+                            if (t != n)
+                            {
+                                y = k;
+                                w = n / y;
+                            }
+                        }
+                        //}
+                        //} // end of the faster loop
+
+                        //else
+                        //{
+                        //    for (k = 3; k <= w; k = k + 2)
+                        //    {
+                        //        BigInteger i = n / k;
+                        //        BigInteger t = (Math.Floor(i));
+
+                        //        if (t == i)
+                        //        {
+                        //            primej = "This number is composite. The smallest divisor, greater than 1 is " + k.ToString();
+                        //            u = true;
+                        //            break;
+                        //        }
+
+                        //        if (t != i)
+                        //        {
+                        //            y = k;
+                        //            w = (Math.Floor(n / y));
+                        //        }
+                        //    }
+                        //}
+
+                    }
+
+                    if (u == false)
+                    {
+                        primej = "This number is prime.";
+                        res = 3;
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
+InfiNum.cs
+{
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Numerics;
+
+namespace Simple_Calc
+{
+    class InfiNum
+    {
+        private string val = "0.000000000000000000000000000000";
+
+        public Int64? point = null;
+        public bool Negative = false;
+
+        public bool _0 = true;
+
+        public InfiNum(string v)
+        {
+            Value = v;
+        }
+
+        public InfiNum()
+        {
+            Value = val;
+            _0 = true;
+        }
+
+        public string Value
+        {
+            get
+            {
+                return val;
+            }
+
+            set
+            {
+                char[] c = value.ToCharArray();
+                bool b = false;
+                Int64? po = null;
+
+                if (value != "")
+                {
+                    
+
+                    for (Int64 i = 0; i < c.Length; i++)
+                    {
+                        if (i == 0)
+                        {
+                            if (c[i] != '-' && c[i] != '0' && c[i] != '1' && c[i] != '2' && c[i] != '3' && c[i] != '4' && c[i] != '5' && c[i] != '6' && c[i] != '7' && c[i] != '8' && c[i] != '9')
+                            {
+                                b = true;
+                                break;
+                            }
+                        }
+
+                        else
+                        {
+                            if (c[i] != '0' && c[i] != '1' && c[i] != '2' && c[i] != '3' && c[i] != '4' && c[i] != '5' && c[i] != '6' && c[i] != '7' && c[i] != '8' && c[i] != '9' && c[i] != '.')
+                            {
+                                b = true;
+                                break;
+                            }
+
+                            else
+                            {
+                                if (c[i] == '.')
+                                {
+                                    po = i;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                else
+                {
+                    b = true;
+                }
+
+                if (b)
+                {
+                    _0 = true;
+                    value = val;
+                }
+
+                else
+                {
+                    _0 = false;
+
+                    if (c[0] == '-')
+                    {
+                        Negative = true;
+                    }
+
+                    else
+                    {
+                        Negative = false;
+                    }
+
+                    point = po;
+
+                    bool notdone = true;
+
+                    if (notdone)
+                    {
+                        bool firstime = true;
+                        if (point == null)
+                        {
+                            val = "";
+
+                            for (Int64 i = 0; i < c.Length - 1 + 32; i++)
+                            {
+                                if (i < c.Length)
+                                {
+                                    val = val + c[i];
+                                }
+
+                                else
+                                {
+                                    if (firstime)
+                                    {
+                                        val = val + ".";
+                                        firstime = false;
+                                    }
+
+                                    else
+                                    {
+                                        val = val + "0";
+                                    }
+                                }
+                            }
+                        }
+
+                        else
+                        {
+                            val = "";
+
+                            if (c.Length - 1 - point < 30)
+                            {
+                                for (Int64 i = 0; i < c.Length + 30 - (c.Length - 1 - point); i++)
+                                {
+                                    if (i < c.Length)
+                                    {
+                                        val = val + c[i];
+                                    }
+
+                                    else
+                                    {
+                                        val = val + "0";
+                                    }
+                                }
+                            }
+
+                            else
+                            {
+                                for (Int64 i = 0; i < point + 31; i++)
+                                {
+                                    if (i < c.Length)
+                                    {
+                                        val = val + c[i];
+                                    }
+
+                                    else
+                                    {
+                                        val = val + "0";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public string Add(string V2)
+        {
+            string ans = "";
+
+            char[] c1 = Value.ToCharArray();
+            string a = "";
+            bool nopoint = true;
+
+            char[] c2 = V2.ToCharArray();
+            string b = "";
+            bool nocap = true;
+
+            for (int i = 0; i < c1.Length; i++)
+            {
+                if (c1[i] != '.')
+                {
+                    a = a + c1[i];
+                }
+
+                else
+                {
+                    nopoint = false;
+                }
+            }
+
+            if (nopoint)
+            {
+                bool tisend = true;
+                a = a + "000000000000000000000000000000";//30 places
+            }
+
+            for (int i = 0; i < c2.Length; i++)
+            {
+                if (c2[i] != '.')
+                {
+                    b = b + c2[i];
+                }
+
+                else
+                {
+                    nocap = false;
+                }
+            }
+
+            if (nocap)
+            {
+                bool fact = true;
+                b = b + "000000000000000000000000000000";
+            }
+
+            BigInteger add2 = BigInteger.Parse(a) + BigInteger.Parse(b);
+            string s1 = add2.ToString();
+            char[] c3 = s1.ToCharArray();
+            char[] c3b = new char[s1.Length + 1];
+            bool stop = false;
+
+            if (c3.Length <= 30)
+            {
+                int j = 31 - c3.Length;//and 3..1 here
+                for (int i = 0; i < j + 1; i++)
+                {
+                    if (i == 0)
+                    {
+                        ans = "0.";
+                    }
+
+                    else if (i != j)//so no 1 here
+                    {
+                        bool alone = true;
+                        if (alone)
+                        {
+                            bool behappy_on = true;
+                        }
+
+                        ans = ans + "0";
+                    }
+
+                    if (i == j)
+                    {
+                        ans = ans + s1;
+                    }
+                }
+            }
+
+            else
+            {
+                for (int i = c3.Length - 1; i >= 0; i--)
+                {
+                    if (c3.Length - i - 1 == 30)
+                    {
+                        ans = c3[i] + "." + ans;
+                    }
+
+                    else
+                    {
+                        ans = c3[i] + ans;
+                    }
+                }
+            }
+
+            return ans;
+        }
+
+        public string Subtract(string V2)
+        {
+            string ans = "";
+
+            char[] c1 = Value.ToCharArray();
+            string a = "";
+            bool nopoint = true;
+
+            char[] c2 = V2.ToCharArray();
+            string b = "";
+            bool nocap = true;
+
+            for (int i = 0; i < c1.Length; i++)
+            {
+                if (c1[i] != '.')
+                {
+                    a = a + c1[i];
+                }
+
+                else
+                {
+                    nopoint = false;
+                }
+            }
+
+            if (nopoint)
+            {
+                bool tisend = true;
+                a = a + "000000000000000000000000000000";
+            }
+
+            for (int i = 0; i < c2.Length; i++)
+            {
+                if (c2[i] != '.')
+                {
+                    b = b + c2[i];
+                }
+
+                else
+                {
+                    nocap = false;
+                }
+            }
+
+            if (nocap)
+            {
+                bool fact = true;
+                b = b + "000000000000000000000000000000";
+            }
+
+            BigInteger sub2 = BigInteger.Parse(a) - BigInteger.Parse(b);
+            string s1 = sub2.ToString();
+            char[] c3 = s1.ToCharArray();
+            char[] c3b = new char[s1.Length + 1];
+
+            if (c3.Length <= 30)
+            {
+                int j = 31 - c3.Length;//and 3..1 here
+                for (int i = 0; i < j + 1; i++)
+                {
+                    if (i == 0)
+                    {
+                        ans = "0.";
+                    }
+
+                    else if (i != j)//so no 1 here
+                    {
+                        bool alone = true;
+                        if (alone)
+                        {
+                            bool behappy_on = true;
+                        }
+
+                        ans = ans + "0";
+                    }
+
+                    if (i == j)
+                    {
+                        ans = ans + s1;
+                    }
+                }
+            }
+
+            else
+            {
+                for (int i = c3.Length - 1; i >= 0; i--)
+                {
+                    if (c3.Length - i - 1 == 30)
+                    {
+                        ans = c3[i] + "." + ans;
+                    }
+
+                    else
+                    {
+                        ans = c3[i] + ans;
+                    }
+                }
+            }
+
+            return ans;
+        }
+
+        public string Multiply(string V2)
+        {
+            string ans = "";
+
+            char[] c1 = Value.ToCharArray();
+            string a = "";
+            bool nopoint = true;
+
+            char[] c2 = V2.ToCharArray();
+            string b = "";
+            bool nocap = true;
+
+            for (int i = 0; i < c1.Length; i++)
+            {
+                if (c1[i] != '.')
+                {
+                    a = a + c1[i];
+                }
+
+                else
+                {
+                    nopoint = false;
+                }
+            }
+
+            if (nopoint)
+            {
+                bool tisend = true;
+                a = a + "000000000000000000000000000000";
+            }
+
+            for (int i = 0; i < c2.Length; i++)
+            {
+                if (c2[i] != '.')
+                {
+                    b = b + c2[i];
+                }
+
+                else
+                {
+                    nocap = false;
+                }
+            }
+
+            if (nocap)
+            {
+                bool fact = true;
+                b = b + "000000000000000000000000000000";
+            }
+
+            BigInteger sub2 = BigInteger.Parse(a) * BigInteger.Parse(b);
+            string s1 = sub2.ToString();
+            char[] c3 = s1.ToCharArray();
+
+            if (s1.Length <= 30)
+            {
+                if (sub2 != 0)
+                {
+                    ans = "0.000000000000000000000000000001";
+                }
+
+                else
+                {
+                    ans = "0.000000000000000000000000000000";
+                }
+            }
+
+            else
+            {
+                char[] c3b = new char[s1.Length - 30];
+
+                if (c3.Length <= 60)
+                {
+                    s1 = "";
+                    for (int i = 0; i < c3b.Length; i++)
+                    {
+                        s1 = s1 + c3[i].ToString();
+                    }
+
+                    int j = 30 - (c3.Length - 30);//30andno1
+                    for (int i = 0; i < j + 1; i++)
+                    {
+                        if (i == 0)
+                        {
+                            ans = "0.";
+                        }
+
+                        else if (i != j + 1)//that's why 1 here
+                        {
+                            ans = ans + "0";
+                        }
+
+                        if (i == j)
+                        {
+                            ans = ans + s1;
+                        }
+                    }
+                }
+
+                else
+                {
+                    for (int i = c3.Length - 1 - 30; i >= 0; i--)
+                    {
+                        if (c3.Length - i - 1 == 60)
+                        {
+                            ans = c3[i] + "." + ans;
+                        }
+
+                        else
+                        {
+                            ans = c3[i] + ans;
+                        }
+                    }
+                }
+            }
+
+            return ans;
+        }
+
+        public string Divide(string V2)
+        {
+            string ans = "";
+
+            char[] c1 = Value.ToCharArray();
+            string a = "";
+            bool nopoint = true;
+
+            char[] c2 = V2.ToCharArray();
+            string b = "";
+            bool nocap = true;
+
+            for (int i = 0; i < c1.Length; i++)
+            {
+                if (c1[i] != '.')
+                {
+                    a = a + c1[i];
+                }
+
+                else
+                {
+                    nopoint = false;
+                }
+            }
+
+            if (nopoint)
+            {
+                bool tisend = true;
+                a = a + "000000000000000000000000000000";
+            }
+
+            for (int i = 0; i < c2.Length; i++)
+            {
+                if (c2[i] != '.')
+                {
+                    b = b + c2[i];
+                }
+
+                else
+                {
+                    nocap = false;
+                }
+            }
+
+            if (nocap)
+            {
+                bool fact = true;
+                b = b + "000000000000000000000000000000";
+            }
+
+            a = a + "000000000000000000000000000000";
+
+            BigInteger sub2 = BigInteger.Parse(a) / BigInteger.Parse(b);
+            string s1 = sub2.ToString();
+            char[] c3 = s1.ToCharArray();
+            char[] c3b = new char[s1.Length + 1];
+
+            if (c3.Length <= 30)
+            {
+                int j = 31 - c3.Length;//and 3..1 here
+                for (int i = 0; i < j + 1; i++)
+                {
+                    if (i == 0)
+                    {
+                        ans = "0.";
+                    }
+
+                    else if (i != j)//so no 1 here
+                    {
+                        bool alone = true;
+                        if (alone)
+                        {
+                            bool behappy_on = true;
+                        }
+
+                        ans = ans + "0";
+                    }
+
+                    if (i == j)
+                    {
+                        ans = ans + s1;
+                    }
+                }
+            }
+
+            else
+            {
+                for (int i = c3.Length - 1; i >= 0; i--)
+                {
+                    if (c3.Length - i - 1 == 30)
+                    {
+                        ans = c3[i] + "." + ans;
+                    }
+
+                    else
+                    {
+                        ans = c3[i] + ans;
+                    }
+                }
+            }
+
+            return ans;
+        }
+
+        public string Root(string rot)
+        {
+            string ans = "";
+            InfiNum r = new InfiNum();
+            InfiNum v = new InfiNum();
+            InfiNum rot2 = new InfiNum();
+
+            v.Value = Value;
+            rot2.Value = rot;
+
+            r.Value = v.Divide(rot2.Value);  //the first approximation
+
+            InfiNum m1 = new InfiNum(), m2 = new InfiNum();//the initial limits
+            m2.Value = v.Value;
+
+            InfiNum u = new InfiNum();
+
+            if (v.SmallerEquals("1") && v.Greater("0"))
+            {
+                m2.Value = "1";
+            }
+
+            do
+            {
+                u.Value = r.Value;
+                InfiNum i = new InfiNum();
+                for (i.Value = "1"; i.Smaller(rot2.Value); i.Value = i.Add("1"))
+                {
+                    u.Value = u.Multiply(r.Value);
+                }
+
+                if (v.Equals(u.Value))
+                {
+                    break;
+                }
+
+                if (v.Smaller(u.Value))//the product is greater than the number 
+                {
+                    m2.Value = r.Value;//the new upper limit
+
+                    InfiNum h1 = new InfiNum();
+                    h1.Value = m2.Subtract(m1.Value);
+                    h1.Value = h1.Divide("2.000000000000000000000000000000");
+
+                    if (m2.Value == m2.Subtract(h1.Value))
+                    {
+                        break;
+                    }
+
+                    r.Value = m2.Subtract(h1.Value);//the new r value
+                }
+
+                if (v.Greater(u.Value))//the product is less than the number 
+                {
+                    m1.Value = r.Value;
+
+                    InfiNum h1 = new InfiNum();
+                    h1.Value = m2.Subtract(m1.Value);
+                    h1.Value = h1.Divide("2.000000000000000000000000000000");
+
+                    if (m1.Value == m1.Add(h1.Value))
+                    {
+                        break;
+                    }
+
+                    r.Value = m1.Add(h1.Value);
+                }
+            }
+            while (m2.Value != m1.Value);
+
+            ans = r.Value;
+
+            return ans;
+        }
+
+        public bool Greater(string V2)
+        {
+            bool tf = false;
+
+            string ans = "";
+
+            char[] c1 = Value.ToCharArray();
+            string a = "";
+            bool nopoint = true;
+
+            char[] c2 = V2.ToCharArray();
+            string b = "";
+            bool nocap = true;
+
+            for (int i = 0; i < c1.Length; i++)
+            {
+                if (c1[i] != '.')
+                {
+                    a = a + c1[i];
+                }
+
+                else
+                {
+                    nopoint = false;
+                }
+            }
+
+            if (nopoint)
+            {
+                bool tisend = true;
+                a = a + "000000000000000000000000000000";//30 places
+            }
+
+            for (int i = 0; i < c2.Length; i++)
+            {
+                if (c2[i] != '.')
+                {
+                    b = b + c2[i];
+                }
+
+                else
+                {
+                    nocap = false;
+                }
+            }
+
+            if (nocap)
+            {
+                bool fact = true;
+                b = b + "000000000000000000000000000000";
+            }
+
+            BigInteger aa = BigInteger.Parse(a);
+            BigInteger bb = BigInteger.Parse(b);
+
+            if (aa > bb)
+            {
+                tf = true;
+            }
+
+            else
+            {
+                tf = false;
+            }
+
+            return tf;
+        }
+
+        public bool Smaller(string V2)
+        {
+            bool tf = false;
+
+            string ans = "";
+
+            char[] c1 = Value.ToCharArray();
+            string a = "";
+            bool nopoint = true;
+
+            char[] c2 = V2.ToCharArray();
+            string b = "";
+            bool nocap = true;
+
+            for (int i = 0; i < c1.Length; i++)
+            {
+                if (c1[i] != '.')
+                {
+                    a = a + c1[i];
+                }
+
+                else
+                {
+                    nopoint = false;
+                }
+            }
+
+            if (nopoint)
+            {
+                bool tisend = true;
+                a = a + "000000000000000000000000000000";//30 places
+            }
+
+            for (int i = 0; i < c2.Length; i++)
+            {
+                if (c2[i] != '.')
+                {
+                    b = b + c2[i];
+                }
+
+                else
+                {
+                    nocap = false;
+                }
+            }
+
+            if (nocap)
+            {
+                bool fact = true;
+                b = b + "000000000000000000000000000000";
+            }
+
+            BigInteger aa = BigInteger.Parse(a);
+            BigInteger bb = BigInteger.Parse(b);
+
+            if (aa < bb)
+            {
+                tf = true;
+            }
+
+            else
+            {
+                tf = false;
+            }
+
+            return tf;
+        }
+
+        public bool Equals(string V2)
+        {
+            bool tf = false;
+
+            string ans = "";
+
+            char[] c1 = Value.ToCharArray();
+            string a = "";
+            bool nopoint = true;
+
+            char[] c2 = V2.ToCharArray();
+            string b = "";
+            bool nocap = true;
+
+            for (int i = 0; i < c1.Length; i++)
+            {
+                if (c1[i] != '.')
+                {
+                    a = a + c1[i];
+                }
+
+                else
+                {
+                    nopoint = false;
+                }
+            }
+
+            if (nopoint)
+            {
+                bool tisend = true;
+                a = a + "000000000000000000000000000000";//30 places
+            }
+
+            for (int i = 0; i < c2.Length; i++)
+            {
+                if (c2[i] != '.')
+                {
+                    b = b + c2[i];
+                }
+
+                else
+                {
+                    nocap = false;
+                }
+            }
+
+            if (nocap)
+            {
+                bool fact = true;
+                b = b + "000000000000000000000000000000";
+            }
+
+            BigInteger aa = BigInteger.Parse(a);
+            BigInteger bb = BigInteger.Parse(b);
+
+            if (aa == bb)
+            {
+                tf = true;
+            }
+
+            else
+            {
+                tf = false;
+            }
+
+            return tf;
+        }
+
+        public bool GreaterEquals(string V2)
+        {
+            bool tf = false;
+
+            string ans = "";
+
+            char[] c1 = Value.ToCharArray();
+            string a = "";
+            bool nopoint = true;
+
+            char[] c2 = V2.ToCharArray();
+            string b = "";
+            bool nocap = true;
+
+            for (int i = 0; i < c1.Length; i++)
+            {
+                if (c1[i] != '.')
+                {
+                    a = a + c1[i];
+                }
+
+                else
+                {
+                    nopoint = false;
+                }
+            }
+
+            if (nopoint)
+            {
+                bool tisend = true;
+                a = a + "000000000000000000000000000000";//30 places
+            }
+
+            for (int i = 0; i < c2.Length; i++)
+            {
+                if (c2[i] != '.')
+                {
+                    b = b + c2[i];
+                }
+
+                else
+                {
+                    nocap = false;
+                }
+            }
+
+            if (nocap)
+            {
+                bool fact = true;
+                b = b + "000000000000000000000000000000";
+            }
+
+            BigInteger aa = BigInteger.Parse(a);
+            BigInteger bb = BigInteger.Parse(b);
+
+            if (aa >= bb)
+            {
+                tf = true;
+            }
+
+            else
+            {
+                tf = false;
+            }
+
+            return tf;
+        }
+
+        public bool SmallerEquals(string V2)
+        {
+            bool tf = false;
+
+            string ans = "";
+
+            char[] c1 = Value.ToCharArray();
+            string a = "";
+            bool nopoint = true;
+
+            char[] c2 = V2.ToCharArray();
+            string b = "";
+            bool nocap = true;
+
+            for (int i = 0; i < c1.Length; i++)
+            {
+                if (c1[i] != '.')
+                {
+                    a = a + c1[i];
+                }
+
+                else
+                {
+                    nopoint = false;
+                }
+            }
+
+            if (nopoint)
+            {
+                bool tisend = true;
+                a = a + "000000000000000000000000000000";//30 places
+            }
+
+            for (int i = 0; i < c2.Length; i++)
+            {
+                if (c2[i] != '.')
+                {
+                    b = b + c2[i];
+                }
+
+                else
+                {
+                    nocap = false;
+                }
+            }
+
+            if (nocap)
+            {
+                bool fact = true;
+                b = b + "000000000000000000000000000000";
+            }
+
+            BigInteger aa = BigInteger.Parse(a);
+            BigInteger bb = BigInteger.Parse(b);
+
+            if (aa <= bb)
+            {
+                tf = true;
+            }
+
+            else
+            {
+                tf = false;
+            }
+
+            return tf;
+        }
+    }
+}
+}
+
+GCDiv.cs
+{
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Numerics;
+
+namespace Simple_Calc
+{
+    class GCDiv
+    {
+        public void GreatestCD(BigInteger c, BigInteger d, out BigInteger ans)
+        {
+            ans = 1;
+
+            if (d > c)
+            {
+                for (BigInteger i = ans; i < c; i++)
+                {
+                    BigInteger h3 = d / i;
+
+                    BigInteger h2 = c / i;
+
+                    if (h3 != 0 && h2 != 0)
+                    {
+                        if (d == h3 * i && c == h2 * i)
+                        {
+                            ans = i;
+                        }
+                    }
+                }
+            }
+
+            if (c > d)
+            {
+                for (BigInteger i = ans; i < d; i++)
+                {
+                    BigInteger h3 = d / i;
+
+                    BigInteger h2 = c / i;
+
+                    if (h3 != 0 && h2 != 0)
+                    {
+                        if (d == h3 * i && c == h2 * i)
+                        {
+                            ans = i;
+                        }
+                    }
+                }
+            }
+
+            BigInteger h = 0;
+
+            if (d > c)
+            {
+                h = d / c;
+            }
+
+            if (d < c)
+            {
+                h = c / d;
+            }
+
+            if (c > d)
+            {
+                if (c == d * h)
+                {
+                    ans = d;
+                }
+            }
+
+            if (d > c)
+            {
+                if (d == c * h)
+                {
+                    ans = c;
+                }
+            }
+
+
+            if (d == c)
+            {
+                ans = d;
+            }
+        }
+    }
+}
+}
+
+LCMultiple.cs
+{
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Numerics;
+
+namespace Simple_Calc
+{
+    class LCMultiple
+    {
+        public void LeastCM(BigInteger c, BigInteger d, out BigInteger ans)
+        {
+            ans = c * d;
+
+            if (d > c)
+            {
+                for (BigInteger i = ans; i > d; i--)
+                {
+                    BigInteger h3 = i / d;
+
+                    BigInteger h2 = i / c;
+
+                    if (h3 != 0 && h2 != 0)
+                    {
+                        if (i == h3 * d && i == h2 * c)
+                        {
+                            ans = i;
+                        }
+                    }
+                }
+            }
+
+            if (c > d)
+            {
+                for (BigInteger i = ans; i > c; i--)
+                {
+                    BigInteger h3 = i / d;
+
+                    BigInteger h2 = i / c;
+
+                    if (h3 != 0 && h2 != 0)
+                    {
+                        if (i == h3 * d && i == h2 * c)
+                        {
+                            ans = i;
+                        }
+                    }
+                }
+            }
+
+            BigInteger h = 0;
+
+            if (d > c)
+            {
+                h = d / c;
+            }
+
+            if (d < c)
+            {
+                h = c / d;
+            }
+
+            if (c > d)
+            {
+                if (c == d * h)
+                {
+                    ans = c;
+                }
+            }
+
+            if (d > c)
+            {
+                if (d == c * h)
+                {
+                    ans = d;
+                }
+            }
+        }
+    }
+}
+
+Root.cs
+{
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Simple_Calc
+{
+    class Root
+    {
+        public void Rt(decimal w, decimal rot, out decimal r)
+        {
+            r = w / rot;  //the first approximation
+
+            decimal m1 = 0, m2 = w;//the initial limits
+            decimal u = 0;
+
+            if (w <= 1 && w > 0)
+            {
+                m2 = 1;
+            }
+
+            do
+            {
+                u = r;
+                for (int i = 1; i < rot; i++)
+                {
+                    u = u * r;
+                }
+
+                if (w == u)
+                {
+                    break;
+                }
+
+                if (w < u)//the product is greater than the number 
+                {
+                    m2 = r;//the new upper limit
+
+                    if (m2 == m2 - ((m2 - m1) / 2))
+                    {
+                        break;
+                    }
+
+                    r = m2 - ((m2 - m1) / 2);//the new r value
+                }
+
+                if (w > u)//the product is less than the number 
+                {
+                    m1 = r;
+
+                    if (m1 == m1 + ((m2 - m1) / 2))
+                    {
+                        break;
+                    }
+
+                    r = m1 + ((m2 - m1) / 2);
+                }
+            }
+            while (m2 != m1);
+        }
+
+    }
+}
+}

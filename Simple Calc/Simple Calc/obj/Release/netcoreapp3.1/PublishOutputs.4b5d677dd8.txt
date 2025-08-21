@@ -1,0 +1,5 @@
+D:\Me\Programs\repos\Simple Calc\Simple Calc.exe
+D:\Me\Programs\repos\Simple Calc\Simple Calc.dll
+D:\Me\Programs\repos\Simple Calc\Simple Calc.deps.json
+D:\Me\Programs\repos\Simple Calc\Simple Calc.runtimeconfig.json
+D:\Me\Programs\repos\Simple Calc\Simple Calc.pdb

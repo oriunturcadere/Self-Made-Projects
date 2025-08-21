@@ -1,0 +1,34 @@
+C:\Users\james\source\repos\Simple Calc\Simple Calc\bin\Debug\netcoreapp3.1\Simple Calc.exe
+C:\Users\james\source\repos\Simple Calc\Simple Calc\bin\Debug\netcoreapp3.1\Simple Calc.deps.json
+C:\Users\james\source\repos\Simple Calc\Simple Calc\bin\Debug\netcoreapp3.1\Simple Calc.runtimeconfig.json
+C:\Users\james\source\repos\Simple Calc\Simple Calc\bin\Debug\netcoreapp3.1\Simple Calc.runtimeconfig.dev.json
+C:\Users\james\source\repos\Simple Calc\Simple Calc\bin\Debug\netcoreapp3.1\Simple Calc.dll
+C:\Users\james\source\repos\Simple Calc\Simple Calc\bin\Debug\netcoreapp3.1\Simple Calc.pdb
+C:\Users\james\source\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple_Calc.Form1.resources
+C:\Users\james\source\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple Calc.csproj.GenerateResource.cache
+C:\Users\james\source\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple Calc.AssemblyInfoInputs.cache
+C:\Users\james\source\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple Calc.AssemblyInfo.cs
+C:\Users\james\source\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple Calc.csproj.CoreCompileInputs.cache
+C:\Users\james\source\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple Calc.dll
+C:\Users\james\source\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple Calc.pdb
+C:\Users\james\source\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple Calc.genruntimeconfig.cache
+C:\Users\james\source\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple_Calc.Info.resources
+C:\Users\james\source\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple Calc.csproj.AssemblyReference.cache
+C:\Users\james\source\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple Calc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Intel\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple Calc.csproj.AssemblyReference.cache
+C:\Intel\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple_Calc.Form1.resources
+C:\Intel\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple_Calc.Info.resources
+C:\Intel\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple Calc.csproj.GenerateResource.cache
+C:\Intel\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple Calc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Intel\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple Calc.AssemblyInfoInputs.cache
+C:\Intel\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple Calc.AssemblyInfo.cs
+C:\Intel\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple Calc.csproj.CoreCompileInputs.cache
+C:\Intel\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple Calc.dll
+C:\Intel\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple Calc.pdb
+C:\Intel\repos\Simple Calc\Simple Calc\bin\Debug\netcoreapp3.1\Simple Calc.exe
+C:\Intel\repos\Simple Calc\Simple Calc\bin\Debug\netcoreapp3.1\Simple Calc.deps.json
+C:\Intel\repos\Simple Calc\Simple Calc\bin\Debug\netcoreapp3.1\Simple Calc.runtimeconfig.json
+C:\Intel\repos\Simple Calc\Simple Calc\bin\Debug\netcoreapp3.1\Simple Calc.runtimeconfig.dev.json
+C:\Intel\repos\Simple Calc\Simple Calc\bin\Debug\netcoreapp3.1\Simple Calc.dll
+C:\Intel\repos\Simple Calc\Simple Calc\bin\Debug\netcoreapp3.1\Simple Calc.pdb
+C:\Intel\repos\Simple Calc\Simple Calc\obj\Debug\netcoreapp3.1\Simple Calc.genruntimeconfig.cache
