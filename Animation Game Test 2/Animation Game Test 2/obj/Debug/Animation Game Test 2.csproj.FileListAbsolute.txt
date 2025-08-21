@@ -1,0 +1,25 @@
+C:\Users\james\source\repos\Animation Game Test 2\Animation Game Test 2\bin\Debug\Animation Game Test 2.exe.config
+C:\Users\james\source\repos\Animation Game Test 2\Animation Game Test 2\bin\Debug\Animation Game Test 2.exe
+C:\Users\james\source\repos\Animation Game Test 2\Animation Game Test 2\bin\Debug\Animation Game Test 2.pdb
+C:\Users\james\source\repos\Animation Game Test 2\Animation Game Test 2\obj\Debug\Animation_Game_Test_2.Form1.resources
+C:\Users\james\source\repos\Animation Game Test 2\Animation Game Test 2\obj\Debug\Animation_Game_Test_2.Properties.Resources.resources
+C:\Users\james\source\repos\Animation Game Test 2\Animation Game Test 2\obj\Debug\Animation Game Test 2.csproj.GenerateResource.cache
+C:\Users\james\source\repos\Animation Game Test 2\Animation Game Test 2\obj\Debug\Animation Game Test 2.csproj.CoreCompileInputs.cache
+C:\Users\james\source\repos\Animation Game Test 2\Animation Game Test 2\obj\Debug\Animation Game Test 2.exe
+C:\Users\james\source\repos\Animation Game Test 2\Animation Game Test 2\obj\Debug\Animation Game Test 2.pdb
+C:\Users\james\source\repos\Animation Game Test 2\Animation Game Test 2\obj\Debug\Animation_Game_Test_2.About.resources
+C:\Users\james\source\repos\Animation Game Test 2\Animation Game Test 2\obj\Debug\Animation_Game_Test_2.Start.resources
+C:\Users\james\OneDrive\Desktop\Programs\repos\Animation Game Test 2\Animation Game Test 2\bin\Debug\Animation Game Test 2.exe.config
+C:\Users\james\OneDrive\Desktop\Programs\repos\Animation Game Test 2\Animation Game Test 2\bin\Debug\Animation Game Test 2.exe
+C:\Users\james\OneDrive\Desktop\Programs\repos\Animation Game Test 2\Animation Game Test 2\bin\Debug\Animation Game Test 2.pdb
+C:\Users\james\OneDrive\Desktop\Programs\repos\Animation Game Test 2\Animation Game Test 2\obj\Debug\Animation Game Test 2.csproj.AssemblyReference.cache
+C:\Users\james\OneDrive\Desktop\Programs\repos\Animation Game Test 2\Animation Game Test 2\obj\Debug\Animation_Game_Test_2.About.resources
+C:\Users\james\OneDrive\Desktop\Programs\repos\Animation Game Test 2\Animation Game Test 2\obj\Debug\Animation_Game_Test_2.Form1.resources
+C:\Users\james\OneDrive\Desktop\Programs\repos\Animation Game Test 2\Animation Game Test 2\obj\Debug\Animation_Game_Test_2.Properties.Resources.resources
+C:\Users\james\OneDrive\Desktop\Programs\repos\Animation Game Test 2\Animation Game Test 2\obj\Debug\Animation_Game_Test_2.Start.resources
+C:\Users\james\OneDrive\Desktop\Programs\repos\Animation Game Test 2\Animation Game Test 2\obj\Debug\Animation Game Test 2.csproj.GenerateResource.cache
+C:\Users\james\OneDrive\Desktop\Programs\repos\Animation Game Test 2\Animation Game Test 2\obj\Debug\Animation Game Test 2.csproj.CoreCompileInputs.cache
+C:\Users\james\OneDrive\Desktop\Programs\repos\Animation Game Test 2\Animation Game Test 2\obj\Debug\Animation Game Test 2.exe
+C:\Users\james\OneDrive\Desktop\Programs\repos\Animation Game Test 2\Animation Game Test 2\obj\Debug\Animation Game Test 2.pdb
+C:\Users\james\source\repos\Animation Game Test 2\Animation Game Test 2\obj\Debug\Animation Game Test 2.csproj.AssemblyReference.cache
+C:\Users\james\source\repos\Animation Game Test 2\Animation Game Test 2\obj\Debug\Animation Game Test 2.csproj.SuggestedBindingRedirects.cache
