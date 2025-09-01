@@ -25,8 +25,7 @@ A desktop program that generates random pixel‑based images from a user‑selec
 5. Save the image if desired.
 
 **Example code for Test 3 mode:**
-0 0 0/255 255 25540 60*7000
-Generates a black‑and‑white image with 40% black, 60% white, each pixel held for 7000 ticks.
+0 0 0/255 255 255|40 60*7000. This code will generate a black and white picture with 40% black and 60% white, and each pixel is going to be chosen for 7000 ticks(a tick is 1/10,000 of a millisecond). So here is the code as it must be: Color's RGB/Second color's RGB/Third color's RGB(and so on, just put backslahes between the RGBs)|30(% for the first color) 60(% for the second color) 10(% for the third)*100(time interval for gen of each pixel - the data will be stored in a separate textbox for more understanding).
 
 ## Notes
 - Magnification above ~20 may cause long processing times.
