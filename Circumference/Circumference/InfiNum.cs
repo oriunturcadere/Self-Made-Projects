@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,6 +27,11 @@ namespace Circumference
             }
 
             set { }
+        }
+
+        public static InfiNum num (decimal n) // instead of declaring 'new InfiNum("1")' every time
+        {
+            return new InfiNum(n.ToString());
         }
 
         public InfiNum(string v)
@@ -240,15 +245,15 @@ namespace Circumference
             BigInteger add2 = BigInteger.Parse(a) + BigInteger.Parse(b);
             string s1 = add2.ToString();
             char[] c3 = s1.ToCharArray();
-            char[] c3b = new char[s1.Length + 1];
-            bool stop = false;
 
             if (c3.Length <= zeroAFTp.Length || (c3.Length == zeroAFTp.Length + 1 && c3[0] == '-'))
             {
-                int j = zeroAFTp.Length + 1 - c3.Length;//and 3..1 here
+                int j = zeroAFTp.Length - c3.Length;//and 3..1 here
 
                 if (c3[0] == '-')
                 {
+                    j++;
+
                     ans = ans + "-";
 
                     s1 = "";
@@ -350,14 +355,15 @@ namespace Circumference
             BigInteger sub2 = BigInteger.Parse(a) - BigInteger.Parse(b);
             string s1 = sub2.ToString();
             char[] c3 = s1.ToCharArray();
-            char[] c3b = new char[s1.Length + 1];
 
             if (c3.Length <= zeroAFTp.Length || (c3.Length == zeroAFTp.Length + 1 && c3[0] == '-'))
             {
-                int j = zeroAFTp.Length + 1 - c3.Length;//and 3..1 here
+                int j = zeroAFTp.Length - c3.Length;//and 3..1 here
 
                 if (c3[0] == '-')
                 {
+                    j++;
+
                     ans = ans + "-";
 
                     s1 = "";
@@ -475,28 +481,19 @@ namespace Circumference
 
             else
             {
-                char[] c3b = new char[s1.Length - zeroAFTp.Length];
-
                 if (c3.Length <= zeroAFTp.Length * 2 || (c3.Length == zeroAFTp.Length * 2 + 1 && c3[0] == '-'))
                 {
                     int j = zeroAFTp.Length - (c3.Length - zeroAFTp.Length);//zeroAFTp.Lengthandno1
 
                     if (c3[0] == '-')
                     {
+                        j++;
+
                         ans = ans + "-";
 
                         s1 = "";
 
                         for (int i = 1; i < c3.Length; i++)
-                        {
-                            s1 = s1 + c3[i].ToString();
-                        }
-                    }
-
-                    else
-                    {
-                        s1 = "";
-                        for (int i = 0; i < c3b.Length; i++)
                         {
                             s1 = s1 + c3[i].ToString();
                         }
@@ -590,13 +587,14 @@ namespace Circumference
             BigInteger sub2 = BigInteger.Parse(a) / BigInteger.Parse(b);
             string s1 = sub2.ToString();
             char[] c3 = s1.ToCharArray();
-            char[] c3b = new char[s1.Length + 1];
 
             if (c3.Length <= zeroAFTp.Length || (c3.Length == zeroAFTp.Length + 1 && c3[0] == '-'))
             {
-                int j = zeroAFTp.Length + 1 - c3.Length;//and 3..1 here //j is how many zeros to add
+                int j = zeroAFTp.Length - c3.Length;//and 3..1 here //j is how many zeros to add
                 if (c3[0] == '-')
                 {
+                    j++;
+
                     ans = ans + "-";
 
                     s1 = "";
@@ -642,6 +640,20 @@ namespace Circumference
                 }
             }
 
+            if (ans == "0." + zeroAFTp && InfiNum_Value != new InfiNum("0"))
+            {
+                string t = "";
+
+                for (int i = 0; i < ans.Length - 1; i++)
+                {
+                    t += ans[i];
+                }
+
+                t += "1";
+
+                ans = t;
+            }
+
             return ans;
         }
 
@@ -685,32 +697,28 @@ namespace Circumference
                 {
                     m2.Value = r.Value;//the new upper limit
 
-                    InfiNum h1 = new InfiNum();
-                    h1.Value = m2.Subtract(m1.Value);
-                    h1.Value = h1.Divide("2." + zeroAFTp);
+                    InfiNum h1 = new InfiNum(((m1 + m2) / new InfiNum("2")).Value);
 
-                    if (m2.Value == m2.Subtract(h1.Value))
+                    if (m2.Value == h1.Value)
                     {
                         break;
                     }
 
-                    r.Value = m2.Subtract(h1.Value);//the new r value
+                    r.Value = h1.Value;//the new r value
                 }
 
                 if (v.Greater(u.Value))//the product is less than the number 
                 {
                     m1.Value = r.Value;
 
-                    InfiNum h1 = new InfiNum();
-                    h1.Value = m2.Subtract(m1.Value);
-                    h1.Value = h1.Divide("2." + zeroAFTp);
+                    InfiNum h1 = new InfiNum(((m1 + m2) / new InfiNum("2")).Value);
 
-                    if (m1.Value == m1.Add(h1.Value))
+                    if (m1.Value == h1.Value)
                     {
                         break;
                     }
 
-                    r.Value = m1.Add(h1.Value);
+                    r.Value = h1.Value;
                 }
             }
             while (m2.Value != m1.Value);
@@ -1261,7 +1269,7 @@ namespace Circumference
             return new InfiNum(V.Abs());
         }
 
-        public string Floor()
+        public InfiNum Floor()
         {
             string temp = "";
 
@@ -1280,7 +1288,7 @@ namespace Circumference
                 }
             }
 
-            return temp;
+            return new InfiNum(temp);
         }
 
         public static string Floor(string a)
@@ -1309,7 +1317,7 @@ namespace Circumference
 
         public static InfiNum Floor(InfiNum a)
         {
-            return new InfiNum(a.Floor());
+            return a.Floor();
         }
 
         public static InfiNum operator +(InfiNum a, InfiNum b)
@@ -1341,7 +1349,7 @@ namespace Circumference
             return new InfiNum(a.Pow(b.Value));
         }
 
-        public static InfiNum operator &(InfiNum a, InfiNum b) // root
+        public static InfiNum operator &(InfiNum a, InfiNum b) // root -- (x & 2) + 1 is not the same as x & 2 + 1 ... sadly
         {
             return new InfiNum(a.Root(b.Value));
         }
@@ -1369,12 +1377,119 @@ namespace Circumference
 
         public static bool operator >=(InfiNum a, InfiNum b)
         {
-            return !a.GreaterEquals(b.Value);
+            return a.GreaterEquals(b.Value);
         }
 
         public static bool operator <=(InfiNum a, InfiNum b)
         {
-            return !a.SmallerEquals(b.Value);
+            return a.SmallerEquals(b.Value);
+        }
+
+        public InfiNum Round(int precision)
+        {
+            return Round(InfiNum_Value, precision);
+        }
+
+        public static InfiNum Round(InfiNum num, int precision) // precision after decimal point
+        {
+            precision -= 1;
+
+            string ans = "";
+
+            string a = "";
+            string b = "";
+            string c = "";
+
+            for (int i = 0; i < num.Value.Length; i++)
+            {
+                if (num.Value[i..(i + 1)] != ".")
+                {
+                    a += num.Value[i..(i+1)];
+                }
+            }
+
+            b = a[(a.Length - (zeroAFTp.Length - precision) + 1)..(a.Length)];
+
+            for (int i = a.Length - (zeroAFTp.Length - precision) + 1; i < a.Length; i++)
+            {
+                if (i == a.Length - (zeroAFTp.Length - precision) + 1)
+                {
+                    c = "5";
+                }
+
+                else
+                {
+                    c += "0";
+                }
+            }
+
+            if (new InfiNum(b) <= new InfiNum(c))
+            {
+                for (int i = 0; i < a.Length; i++)
+                {
+                    string add = "";
+
+                    if (i == (a.Length - (zeroAFTp.Length - precision)))
+                    {
+                        add = (Convert.ToInt32(a[(a.Length - (zeroAFTp.Length - precision))..(a.Length - (zeroAFTp.Length - precision) + 1)]) + 0).ToString();
+                    }
+
+                    if (i < (a.Length - (zeroAFTp.Length - precision)))
+                    {
+                        add = a[i..(i + 1)];
+                    }
+
+                    if (i > (a.Length - (zeroAFTp.Length - precision)))
+                    {
+                        add = "0";
+                    }
+
+                    if (i == a.Length - zeroAFTp.Length)
+                    {
+                        ans += "." + add;
+                    }
+
+                    else
+                    {
+                        ans += add;
+                    }
+                }
+            }
+
+            if (new InfiNum(b) > new InfiNum(c))
+            {
+                for (int i = 0; i < a.Length; i++)
+                {
+                    string add = "";
+
+                    if (i == (a.Length - (zeroAFTp.Length - precision)))
+                    {
+                        add = (Convert.ToInt32(a[(a.Length - (zeroAFTp.Length - precision))..(a.Length - (zeroAFTp.Length - precision) + 1)]) + 1).ToString();
+                    }
+
+                    if (i < (a.Length - (zeroAFTp.Length - precision)))
+                    {
+                        add = a[i..(i + 1)];
+                    }
+
+                    if (i > (a.Length - (zeroAFTp.Length - precision)))
+                    {
+                        add = "0";
+                    }
+
+                    if (i == a.Length - zeroAFTp.Length)
+                    {
+                        ans += "." + add;
+                    }
+
+                    else
+                    {
+                        ans += add;
+                    }
+                }
+            }
+
+            return new InfiNum(ans);
         }
     }
 }
