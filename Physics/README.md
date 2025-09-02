@@ -38,7 +38,7 @@ Typical formula for free fall: d = ½ g t² We use iteration since g changes wit
 
 Final partial step solved via quadratic: t = 0.5160708196213155 seconds
 
-Impact velocity: ~78.45 m/s
+Impact velocity: ~44.28 m/s
 
 
 ## How to Use
