@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\oriun\\source\\repos\\Sin Cos Calc 2025 Version\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F5C1ED41-6A1D-4196-BE72-5DFD000AA90A}|Sin Cos Calc 2025 Version\\Sin Cos Calc 2025 Version.csproj|c:\\users\\oriun\\source\\repos\\sin cos calc 2025 version\\sin cos calc 2025 version\\infinum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5C1ED41-6A1D-4196-BE72-5DFD000AA90A}|Sin Cos Calc 2025 Version\\Sin Cos Calc 2025 Version.csproj|solutionrelative:sin cos calc 2025 version\\infinum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5C1ED41-6A1D-4196-BE72-5DFD000AA90A}|Sin Cos Calc 2025 Version\\Sin Cos Calc 2025 Version.csproj|c:\\users\\oriun\\source\\repos\\sin cos calc 2025 version\\sin cos calc 2025 version\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5C1ED41-6A1D-4196-BE72-5DFD000AA90A}|Sin Cos Calc 2025 Version\\Sin Cos Calc 2025 Version.csproj|solutionrelative:sin cos calc 2025 version\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5C1ED41-6A1D-4196-BE72-5DFD000AA90A}|Sin Cos Calc 2025 Version\\Sin Cos Calc 2025 Version.csproj|c:\\users\\oriun\\source\\repos\\sin cos calc 2025 version\\sin cos calc 2025 version\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F5C1ED41-6A1D-4196-BE72-5DFD000AA90A}|Sin Cos Calc 2025 Version\\Sin Cos Calc 2025 Version.csproj|solutionrelative:sin cos calc 2025 version\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5C1ED41-6A1D-4196-BE72-5DFD000AA90A}|Sin Cos Calc 2025 Version\\Sin Cos Calc 2025 Version.csproj|c:\\users\\oriun\\source\\repos\\sin cos calc 2025 version\\sin cos calc 2025 version\\angle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5C1ED41-6A1D-4196-BE72-5DFD000AA90A}|Sin Cos Calc 2025 Version\\Sin Cos Calc 2025 Version.csproj|solutionrelative:sin cos calc 2025 version\\angle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InfiNum.cs",
+              "DocumentMoniker": "C:\\Users\\oriun\\source\\repos\\Sin Cos Calc 2025 Version\\Sin Cos Calc 2025 Version\\InfiNum.cs",
+              "RelativeDocumentMoniker": "Sin Cos Calc 2025 Version\\InfiNum.cs",
+              "ToolTip": "C:\\Users\\oriun\\source\\repos\\Sin Cos Calc 2025 Version\\Sin Cos Calc 2025 Version\\InfiNum.cs",
+              "RelativeToolTip": "Sin Cos Calc 2025 Version\\InfiNum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T02:33:09.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Angle.cs",
+              "DocumentMoniker": "C:\\Users\\oriun\\source\\repos\\Sin Cos Calc 2025 Version\\Sin Cos Calc 2025 Version\\Angle.cs",
+              "RelativeDocumentMoniker": "Sin Cos Calc 2025 Version\\Angle.cs",
+              "ToolTip": "C:\\Users\\oriun\\source\\repos\\Sin Cos Calc 2025 Version\\Sin Cos Calc 2025 Version\\Angle.cs",
+              "RelativeToolTip": "Sin Cos Calc 2025 Version\\Angle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T02:30:17.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\oriun\\source\\repos\\Sin Cos Calc 2025 Version\\Sin Cos Calc 2025 Version\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "Sin Cos Calc 2025 Version\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\oriun\\source\\repos\\Sin Cos Calc 2025 Version\\Sin Cos Calc 2025 Version\\MainPage.xaml.cs",
+              "RelativeToolTip": "Sin Cos Calc 2025 Version\\MainPage.xaml.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwDkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T02:28:26.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\oriun\\source\\repos\\Sin Cos Calc 2025 Version\\Sin Cos Calc 2025 Version\\MainPage.xaml",
+              "RelativeDocumentMoniker": "Sin Cos Calc 2025 Version\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\oriun\\source\\repos\\Sin Cos Calc 2025 Version\\Sin Cos Calc 2025 Version\\MainPage.xaml",
+              "RelativeToolTip": "Sin Cos Calc 2025 Version\\MainPage.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAMAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-02T02:17:46.156Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
