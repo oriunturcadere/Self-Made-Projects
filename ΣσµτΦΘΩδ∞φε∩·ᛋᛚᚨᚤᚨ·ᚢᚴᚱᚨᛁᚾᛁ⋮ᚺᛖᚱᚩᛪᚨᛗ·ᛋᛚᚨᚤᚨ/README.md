@@ -41,7 +41,10 @@ The application supports predicting:
    - Predicted numeric value (numeric target).
 
 **Example:**
-Training Data: M F F M 42 31 23 20 banker fisherman engineer programmer 10000 1200 3112 3878
+Training Data:
+M F F M 42 31 23 20
+banker fisherman engineer programmer
+10000 1200 3112 3878
 Prediction Input: M banker 6000
 
 ## Technical Notes
