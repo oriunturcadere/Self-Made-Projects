@@ -38,30 +38,51 @@ Out of 4 seeds there are 4 unique genotypes and 4 unique phenotypes.
 All the data, sorted:
 
 genotype - times - theoretical probability - 100%
+
 RryYggcCppaATt - 1/4 - 512/16384 - 25%
+
 rRYyggcCppaAtt - 1/4 - 512/16384 - 25%
+
 rrYyggccPpaAtt - 1/4 - 256/16384 - 25%
+
 RRyyggccPpaAtt - 1/4 - 128/16384 - 25%
 
+
 phenotype - times - theoretical probability - 100%
+
 RYgCpAT - 1/4 - 1152/16384 - 25%
+
 RYgCpAt - 1/4 - 1152/16384 - 25%
+
 rYgcPAt - 1/4 - 384/16384 - 25%
+
 RygcPAt - 1/4 - 384/16384 - 25%
+
 
 All the data:
 
 genotype - times - theoretical probability - 100%
+
 RRyyggccPpaAtt - 1/4 - 128/16384 - 25%
+
 rrYyggccPpaAtt - 1/4 - 256/16384 - 25%
+
 rRYyggcCppaAtt - 1/4 - 512/16384 - 25%
+
 RryYggcCppaATt - 1/4 - 512/16384 - 25%
 
+
 phenotype - times - theoretical probability - 100 %
+
 RygcPAt - 1/4 - 384/16384 - 25%
+
 rYgcPAt - 1/4 - 384/16384 - 25%
+
 RYgCpAt - 1/4 - 1152/16384 - 25%
+
 RYgCpAT - 1/4 - 1152/16384 - 25%
+
+
 Raw data:
 
 
