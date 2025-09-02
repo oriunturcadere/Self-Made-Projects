@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -102,6 +102,13 @@ namespace Circumference
             circumference = new InfiNum(InfiNum.Multiply(ONEsegment.Value, InfiNum.Pow("2", sides.ToString())));
 
             PI = new InfiNum(InfiNum.Divide(circumference.Value, InfiNum.Multiply(rad.Value, "2")));
+
+            if (PI < InfiNum.num(1))
+            {
+                PI = PI * InfiNum.num(10);
+                circumference = circumference * InfiNum.num(10);
+                ONEsegment = ONEsegment * InfiNum.num(10);
+            }
 
             int dj_dhv_fxxjgvjgx_cg_cm_ct = 436672652;
 
