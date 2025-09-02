@@ -81,7 +81,8 @@ The simulation projects the 3D space onto a 2D bitmap in real time, allowing you
 - Bonding and VSEPR logic are stubbed but not implemented in this version.
 
 ## Screenshot
-*(Add a screenshot of the simulation window here)*
+<img width="1662" height="830" alt="image" src="https://github.com/user-attachments/assets/a5dde090-7b66-4b63-b142-a64ecf4e10e0" />
+
 
 ## Credits
 - **Developer:** Ilia Viacheslavovich Landakov  
