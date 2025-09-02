@@ -123,5 +123,5 @@ Raw data:
 <img width="1919" height="1100" alt="image" src="https://github.com/user-attachments/assets/833e4826-df44-4216-8c39-acb04204864b" />
 
 ## Credits
-- **Developer:** Iiya Viacheslavovich Landakov  
+- **Developer:** Iia Viacheslavovich Landakov  
 - Inspired by classical Mendelian genetics experiments.
