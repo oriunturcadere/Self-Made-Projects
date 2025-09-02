@@ -36,7 +36,7 @@ Unlike simple constant‑g calculators, this simulation recalculates gravitation
 
 Typical formula for free fall: d = ½ g t² We use iteration since g changes with altitude.
 
-Final partial step solved via quadratic: t = 0.5160708196213155 seconds
+Final partial step solved via quadratic: t = 4.5160708196213155 seconds
 
 Impact velocity: ~44.28 m/s
 
