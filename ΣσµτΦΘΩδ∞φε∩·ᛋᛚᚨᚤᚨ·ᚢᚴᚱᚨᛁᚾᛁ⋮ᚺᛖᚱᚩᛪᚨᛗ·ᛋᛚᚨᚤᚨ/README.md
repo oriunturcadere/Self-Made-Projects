@@ -43,7 +43,9 @@ The application supports predicting:
 **Example:**
 Training Data:
 
-M F F M 42 31 23 20
+M F F M
+
+42 31 23 20
 
 banker fisherman engineer programmer
 
