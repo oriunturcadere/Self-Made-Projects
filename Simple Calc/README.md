@@ -57,7 +57,7 @@ Originally developed as a research project for the All‑Russian Competition of 
 
 
 ## Credits
-- **Developer:** Ilya Vyacheslavovich Landakov  
+- **Developer:** Ilia Viacheslavovich Landakov  
 - **Mentor:** Marina Ivanovna Zhuravlyova (Informatics Teacher, MBOU Lyceum No. 1, Voronezh)  
 - **Scientific Consultant:** Oksana Valerievna Kuripta (Associate Professor, Voronezh State Technical University)
 
