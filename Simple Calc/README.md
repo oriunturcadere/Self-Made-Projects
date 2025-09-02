@@ -53,7 +53,8 @@ Originally developed as a research project for the All‑Russian Competition of 
 - Long computations may require hours or days to complete.
 
 ## Screenshot
-*(Add a screenshot of the interface here)*
+<img width="738" height="725" alt="image" src="https://github.com/user-attachments/assets/4a1a8cbd-860c-414c-b8ab-6c360356ae9e" />
+
 
 ## Credits
 - **Developer:** Ilya Vyacheslavovich Landakov  
