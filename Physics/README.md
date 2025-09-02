@@ -11,18 +11,16 @@ Unlike simple constant‑g calculators, this simulation recalculates gravitation
 ## Features
 - **Variable gravity modeling**:
   - Gravitational acceleration recalculated each step using:
-    \[
-    g_\text{current} = \left( \frac{r}{r + d} \right)^2 \cdot g_\text{surface}
-    \]
+    g_current = (r / (r + d))^2 * g_surface
     where *r* is the body’s radius, *d* is the current height above the surface, and *g* is the surface gravity.
 - **Iterative simulation**:
   - Runs in user‑selected increments (seconds or milliseconds).
   - Uses standard kinematic equations for each step.
   - Handles the final partial step with a quadratic equation for precise impact time.
 - **Astrophysical calculations**:
-  - **Surface gravity** from mass and radius: \( g = \frac{GM}{r^2} \)
-  - **Escape velocity**: \( v_e = \sqrt{\frac{2GM}{R}} \)
-  - **Density**: \( \rho = \frac{M}{V} \), with \( V = \frac{4}{3} \pi r^3 \)
+  - **Surface gravity** from mass and radius: g = G*M / r^2
+  - **Escape velocity**: v_e = sqrt(2GM / R)
+  - **Density**: ρ = M / V ,   V = (4/3) * π * r^3
   - Black hole check: escape velocity > speed of light.
 - **Customizable parameters**:
   - Mass and radius of the central body.
