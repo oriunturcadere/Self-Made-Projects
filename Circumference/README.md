@@ -1,6 +1,6 @@
 # Circumference – High‑Precision Circumference Calculator via Polygon Approximation
 
-**Created:** 2021–2022  
+**Created:** April 2022  
 **Language/Tech:** C#, Windows Forms, System.Numerics
 
 ## Overview
