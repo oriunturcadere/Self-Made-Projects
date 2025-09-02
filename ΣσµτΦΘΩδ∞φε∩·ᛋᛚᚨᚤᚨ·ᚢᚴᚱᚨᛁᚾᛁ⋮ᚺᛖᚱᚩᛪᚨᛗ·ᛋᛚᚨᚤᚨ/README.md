@@ -42,9 +42,13 @@ The application supports predicting:
 
 **Example:**
 Training Data:
+
 M F F M 42 31 23 20
+
 banker fisherman engineer programmer
+
 10000 1200 3112 3878
+
 Prediction Input: M banker 6000
 
 ## Technical Notes
